@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Все про цей блог on Andromeda - Software and SAAS Landing Hugo Theme</title>
+    <link>http://localhost:1313/ukrainian/categories/general/</link>
+    <description>Recent content in Все про цей блог on Andromeda - Software and SAAS Landing Hugo Theme</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="http://localhost:1313/ukrainian/categories/general/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

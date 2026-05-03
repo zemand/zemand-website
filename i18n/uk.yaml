@@ -1,0 +1,53 @@
+- id: socials
+  translation: Соціальні мережі
+
+- id: social_media
+  translation: Соціальні мережі
+
+- id: send_message
+  translation: Відправити повідомлення
+
+- id: message
+  translation: Повідомлення
+
+- id: quick_links
+  translation: Швидкі посилання
+
+- id: location_contact
+  translation: Локація та контакти
+
+- id: recent_posts
+  translation: Нещодавні пости від
+
+- id: related_articles
+  translation: Схожі статті
+
+- id: full_name
+  translation: Повне Ім`я
+
+- id: email
+  translation: Адреса електронної пошти
+
+- id: send_a_message
+  translation: Відправити повідомлення
+
+- id: your_message
+  translation: Твоє повідомлення
+
+- id: phone
+  translation: Номер телефону
+
+- id: contact_us
+  translation: Зв'яжіться з нами
+
+- id: get_in_touch
+  translation: Зв'яжіться з нами
+
+- id: form_thanks_message
+  translation: Дякуємо за вашу заявку!
+
+- id: form_error_message
+  translation: Ой! Виникла проблема під час надсилання форми
+
+- id: min_read
+  translation: Час читання

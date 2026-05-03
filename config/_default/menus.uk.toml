@@ -1,0 +1,45 @@
+############# Ukrainian navigation ##############
+
+# main menu
+[[main]]
+name = "Головна"
+url = "/"
+weight = 1
+
+[[main]]
+name = "Про компанію"
+url = "about/"
+weight = 2
+
+
+[[main]]
+name = "Блог"
+url = "blog/"
+weight = 3
+
+[[main]]
+weight = 4
+name = "Категорії"
+hasChildren = true
+
+  [[main]]
+  parent = "Категорії"
+  name = "Загальні статті"
+  url = "categories/general"
+  weight = 1
+
+
+  [[main]]
+  parent = "Категорії"
+  name = "Мікромережа"
+  url = "categories/microgrid/"
+  weight = 2
+
+
+[[main]]
+name = "Контакти"
+url = "contact/"
+weight = 5
+
+
+

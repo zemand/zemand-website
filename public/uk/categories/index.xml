@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Andromeda - Software and SAAS Landing Hugo Theme</title>
+    <link>http://localhost:1313/uk/categories/</link>
+    <description>Recent content in Categories on Andromeda - Software and SAAS Landing Hugo Theme</description>
+    <generator>Hugo</generator>
+    <language>uk-ua</language>
+    <copyright>Designed By [Themefisher](https://themefisher.com/) &amp; Developed By [Gethugothemes](https://gethugothemes.com/)</copyright>
+    <lastBuildDate>Fri, 01 May 2026 00:00:00 +0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/uk/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Все про технологію Microgrid</title>
+      <link>http://localhost:1313/uk/categories/microgrid/</link>
+      <pubDate>Fri, 01 May 2026 00:00:00 +0300</pubDate>
+      <guid>http://localhost:1313/uk/categories/microgrid/</guid>
+      <description>&lt;p&gt;Тут ти можеш написати великий лонгрід про Microgrid.&#xA;Hugo покаже цей текст, а нижче — всі статті, які ти помітив категорією &amp;ldquo;Microgrid&amp;rdquo;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Все про цей блог</title>
+      <link>http://localhost:1313/uk/categories/general/</link>
+      <pubDate>Wed, 14 Jul 2021 00:00:00 +0300</pubDate>
+      <guid>http://localhost:1313/uk/categories/general/</guid>
+      <description>&lt;p&gt;Тут ти можеш написати великий лонгрід про Blog.&#xA;Hugo покаже цей текст, а нижче — всі статті, які ти помітив категорією &amp;ldquo;Blog&amp;rdquo;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,89 @@
+{{ define "main" }}
+
+{{ partial "components/page-header.html" . }}
+
+{{ if or (eq .Section "post") (eq .Section "posts") (eq .Section "blog") (eq .Section "blogs") (eq .Section "news") (eq .Section "categories") (eq .Section "tags") }}
+
+{{ if .Content }}
+<section class="section-sm pb-0">
+  <div class="container-xxl">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="content">
+          {{ .Content }}
+        </div>
+        <hr class="my-5">
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<section class="section-sm" data-aos="fade-in">
+  <div class="container-xxl">
+    <div class="row justify-content-center">
+      {{/* ВАЖЛИВО: .Paginator автоматично підхоплює статті поточної категорії */}}
+      {{ $paginator := .Paginate .Pages }}
+      {{ range $paginator.Pages }}
+      <div class="col-lg-5 col-md-6 mb-4">
+        {{ .Render "article" }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section-sm pt-0">
+  <div class="container-xxl">
+    <div class="row mb-4">
+      <div class="col-12">
+        {{ $paginator := .Paginator }}
+        {{ if gt $paginator.TotalPages 1 }}
+        <nav>
+          <ul class="pagination justify-content-center">
+            {{ if $paginator.HasPrev }}
+            <li class="page-item">
+              <a class="page-link arrow" href="{{ $paginator.Prev.URL }}" aria-label="Previous">
+                <i class="las la-angle-left"></i>
+              </a>
+            </li>
+            {{ end }}
+
+            {{ range $paginator.Pagers }}
+              <li class="page-item">
+                <a href="{{ .URL }}" class="page-link{{ if eq . $paginator }} active {{ end }}">
+                  {{ .PageNumber }}
+                </a>
+              </li>
+            {{ end }}
+
+            {{ if $paginator.HasNext }}
+            <li class="page-item">
+              <a class="page-link arrow" href="{{ $paginator.Next.URL }}" aria-label="Next">
+                <i class="las la-angle-right"></i>
+              </a>
+            </li>
+            {{ end }}
+          </ul>
+        </nav>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ else }}
+<section class="section">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="content">
+          {{ .Content }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ end }}
