@@ -43,6 +43,19 @@
                 </select>
               </div>
             {{ end }}
+            {{ if .IsTranslated }}
+  <ul class="list-inline mb-0 ms-lg-3">
+    {{ range .Translations }}
+    <li class="list-inline-item"><a class="text-uppercase" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+    {{ end }}
+  </ul>
+{{ end }}
+
+<div class="ms-lg-3 d-inline-block">
+  <button id="theme-toggle" class="nav-theme-btn border-0 bg-transparent p-2" title="Змінити тему" style="cursor: pointer;">
+    <i id="theme-icon" class="las la-moon" style="font-size: 1.4rem; color: #444; transition: 0.3s;"></i>
+  </button>
+</div>
             <button
               class="navbar-toggler"
               type="button"
@@ -156,42 +169,6 @@
               {{ end }}
             </ul>
 
-            <div class="navbar-right">
-              <!-- Language List -->
-              {{ if .IsTranslated }}
-                <div class="d-none d-lg-inline text-center">
-                  <select
-                    class="mx-3 border-0 font-weight-bold"
-                    id="select-language-"
-                    onchange="location = this.value;">
-                    {{ $siteLanguages := site.Languages }}
-                    {{ $pageLang := .Page.Lang }}
-                    {{ range .Page.AllTranslations }}
-                      {{ $translation := . }}
-                      {{ range $siteLanguages }}
-                        {{ if eq $translation.Lang .Lang }}
-                          {{ $selected := false }}
-                          {{ if eq $pageLang .Lang }}
-                            <option
-                              id="{{ $translation.Language }}"
-                              value="{{ $translation.RelPermalink }}"
-                              selected>
-                              {{ .LanguageName }}
-                            </option>
-                          {{ else }}
-                            <option
-                              id="{{ $translation.Language }}"
-                              value="{{ $translation.RelPermalink }}">
-                              {{ .LanguageName }}
-                            </option>
-                          {{ end }}
-                        {{ end }}
-                      {{ end }}
-                    {{ end }}
-                  </select>
-                </div>
-              {{ end }}
-
               {{ if site.Params.navigation_button.enable  }}
               <div class="navbar-right">
                 <a
@@ -208,4 +185,221 @@
     </div>
   </div>
 </header>
+<style>
+  /* ФІНАЛЬНИЙ ТЕМНИЙ СТИЛЬ ДЛЯ ZEMAND AUTOMATION */
+
+  /* 1. Глобальні кольори та фон */
+  html[data-theme="dark"], 
+  html[data-theme="dark"] body {
+    background-color: #121212 !important;
+    color: #d1d1d1 !important; /* М'який білий текст для всього сайту */
+  }
+
+  /* 2. Навігація та Page Header */
+  html[data-theme="dark"] .header-nav,
+  html[data-theme="dark"] .navbar,
+  html[data-theme="dark"] .header-height-fix,
+  html[data-theme="dark"] .page-header,
+  html[data-theme="dark"] .nav-bg-dot,
+  html[data-theme="dark"] section {
+    background-color: #121212 !important;
+    background-image: none !important;
+    border-bottom-color: #2a2a2a !important;
+  }
+
+  /* 3. Шрифти та Заголовки */
+  html[data-theme="dark"] h1, 
+  html[data-theme="dark"] h2, 
+  html[data-theme="dark"] h3, 
+  html[data-theme="dark"] h4, 
+  html[data-theme="dark"] .title,
+  html[data-theme="dark"] .nav-link,
+  html[data-theme="dark"] .navbar-brand {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+  }
+
+  /* Заголовки в картках постів (щоб було видно в списку) */
+  html[data-theme="dark"] .post-title a,
+  html[data-theme="dark"] .card-title a {
+    color: #ffffff !important;
+  }
+  
+  html[data-theme="dark"] .post-title a:hover {
+    color: #FE6019 !important;
+  }
+
+  /* 4. Внутрішній контент статей */
+  html[data-theme="dark"] .content, 
+  html[data-theme="dark"] .post-content {
+    color: #d1d1d1 !important;
+  }
+
+  html[data-theme="dark"] .content strong {
+    color: #ffffff !important;
+  }
+
+  html[data-theme="dark"] .content a:not(.btn) {
+    color: #FE6019 !important;
+    text-decoration: underline;
+  }
+
+  /* Технічні блоки / Код */
+  html[data-theme="dark"] code, 
+  html[data-theme="dark"] pre {
+    background-color: #1a1a1a !important;
+    color: #FE6019 !important;
+    border: 1px solid #333 !important;
+  }
+
+  /* 5. Картки та мета-дані */
+  html[data-theme="dark"] .card, 
+  html[data-theme="dark"] .post-item {
+    background-color: #161616 !important;
+    border: 1px solid #2a2a2a !important;
+  }
+
+  html[data-theme="dark"] .post-meta, 
+  html[data-theme="dark"] .post-meta span {
+    color: #888888 !important;
+  }
+
+  /* 6. ФУТЕР (Нижня частина сайту) */
+  html[data-theme="dark"] footer, 
+  html[data-theme="dark"] .footer {
+    background-color: #0c0c0c !important;
+    border-top: 1px solid #222 !important;
+  }
+
+  html[data-theme="dark"] footer h4, 
+  html[data-theme="dark"] footer h5,
+  html[data-theme="dark"] .footer-title {
+    color: #ffffff !important;
+  }
+
+  html[data-theme="dark"] footer p, 
+  html[data-theme="dark"] footer li a,
+  html[data-theme="dark"] .copyright-text {
+    color: #999999 !important;
+  }
+
+  html[data-theme="dark"] footer li a:hover {
+    color: #FE6019 !important;
+  }
+
+  /* 7. Іконка перемикача */
+  html[data-theme="dark"] #theme-icon {
+    color: #FE6019 !important;
+  }
+
+  /* Плавність для очей */
+  body {
+    transition: background-color 0.3s ease, color 0.3s ease !important;
+  }
+/* 1. Заголовок сторінки (About) - Абсолютний перехват */
+  html[data-theme="dark"] h1,
+  html[data-theme="dark"] h2,
+  html[data-theme="dark"] .text-dark,
+  html[data-theme="dark"] .text-black,
+  html[data-theme="dark"] .text-color,
+  html[data-theme="dark"] .content h1,
+  html[data-theme="dark"] .content h2,
+  html[data-theme="dark"] .section h1,
+  html[data-theme="dark"] .section h2 {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+  /* 2. Дата статті (Meta) */
+  html[data-theme="dark"] .post-meta,
+  html[data-theme="dark"] .post-meta li,
+  html[data-theme="dark"] .post-meta span,
+  html[data-theme="dark"] ul.list-inline.post-meta li,
+  html[data-theme="dark"] .card-meta {
+    color: #aaaaaa !important;
+  }
+
+  /* 3. Опис статті під заголовком */
+  html[data-theme="dark"] .post-item p,
+  html[data-theme="dark"] .post-item .content p,
+  html[data-theme="dark"] .card-body p,
+  html[data-theme="dark"] .card p,
+  html[data-theme="dark"] article p {
+    color: #cccccc !important;
+  }
+/* 1. ABOUT (Хлібні крихти "Home / About" під головним заголовком) */
+  html[data-theme="dark"] .breadcrumb-item,
+  html[data-theme="dark"] .breadcrumb-item a,
+  html[data-theme="dark"] .breadcrumb-item.active {
+    color: #eeeeee !important;
+  }
+
+  /* 2. ДАТА ТА ОПИС В СТАТТЯХ (В картках на головній) */
+  html[data-theme="dark"] .post-meta,
+  html[data-theme="dark"] .post-meta *,
+  html[data-theme="dark"] .card-text,
+  html[data-theme="dark"] .post-item p {
+    color: #aaaaaa !important;
+  }
+
+  /* 3. ЦИТУВАННЯ (Blockquote всередині статей) */
+  html[data-theme="dark"] blockquote,
+  html[data-theme="dark"] blockquote p,
+  html[data-theme="dark"] blockquote cite,
+  html[data-theme="dark"] blockquote span {
+    color: #ffffff !important;
+  }
+  
+  html[data-theme="dark"] blockquote {
+    border-color: #FE6019 !important; /* Робимо рамку цитати помаранчевою для стилю */
+  }
+/* 1. ДАТА В СТАТТЯХ (Абсолютне перекриття всіх можливих тегів) */
+  html[data-theme="dark"] .post-meta,
+  html[data-theme="dark"] .post-meta li,
+  html[data-theme="dark"] .post-meta span,
+  html[data-theme="dark"] .post-meta a,
+  html[data-theme="dark"] .post-meta i,
+  html[data-theme="dark"] .post-meta p {
+    color: #aaaaaa !important;
+  }
+
+  /* 2. КОНТАКТНА ФОРМА (Фікс для image_4959c3.jpg) */
+  
+  /* Підписи полів ("Повне ім'я" тощо) */
+  html[data-theme="dark"] form label,
+  html[data-theme="dark"] .contact-form label {
+    color: #eeeeee !important;
+  }
+
+  /* Поля вводу (робимо їх темно-сірими замість білих) */
+  html[data-theme="dark"] .form-control {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+    border: 1px solid #333333 !important;
+  }
+
+  /* Коли користувач клікає на поле (Фокус) */
+  html[data-theme="dark"] .form-control:focus {
+    border-color: #FE6019 !important; /* Фірмовий помаранчевий акцент */
+    background-color: #161616 !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 0 0.2rem rgba(254, 96, 25, 0.25) !important; /* Легке помаранчеве свічення */
+  }
+
+  /* Текст-підказка всередині порожнього поля */
+  html[data-theme="dark"] .form-control::placeholder {
+    color: #777777 !important;
+  }
+/* ФІНАЛЬНИЙ УДАР ПО ДАТІ В КАРТКАХ */
+  html[data-theme="dark"] .card-body .text-muted,
+  html[data-theme="dark"] .card-body .text-light,
+  html[data-theme="dark"] .card-body .text-dark,
+  html[data-theme="dark"] .card-body small,
+  html[data-theme="dark"] .card-body time,
+  html[data-theme="dark"] .post-author span,
+  html[data-theme="dark"] .post-author small {
+    color: #aaaaaa !important;
+  }
+
+</style>
 <!-- /navigation -->

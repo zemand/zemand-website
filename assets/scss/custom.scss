@@ -1,0 +1,53 @@
+<style>
+  /* Ці стилі спрацюють ТІЛЬКИ коли активовано dark-mode */
+  
+  html[data-theme="dark"], 
+  html[data-theme="dark"] body {
+    background-color: #121212 !important;
+    color: #eeeeee !important;
+  }
+
+  /* Фарбуємо головний блок та секції */
+  html[data-theme="dark"] .main,
+  html[data-theme="dark"] section,
+  html[data-theme="dark"] .section,
+  html[data-theme="dark"] .section-sm,
+  html[data-theme="dark"] .page-header {
+    background-color: #121212 !important;
+    background-image: none !important; /* прибираємо світлі фони теми */
+  }
+
+  /* Навігація та меню */
+  html[data-theme="dark"] header,
+  html[data-theme="dark"] .navigation,
+  html[data-theme="dark"] .navbar {
+    background-color: #1a1a1a !important;
+    border-bottom: 1px solid #333 !important;
+  }
+
+  /* Заголовки та текст */
+  html[data-theme="dark"] h1, 
+  html[data-theme="dark"] h2, 
+  html[data-theme="dark"] h3, 
+  html[data-theme="dark"] .title,
+  html[data-theme="dark"] .nav-link {
+    color: #ffffff !important;
+  }
+
+  html[data-theme="dark"] p,
+  html[data-theme="dark"] li {
+    color: #cccccc !important;
+  }
+
+  /* Картки блогу */
+  html[data-theme="dark"] .card,
+  html[data-theme="dark"] .post-item {
+    background-color: #1a1a1a !important;
+    border: 1px solid #333 !important;
+  }
+
+  /* Помаранчева іконка при темній темі */
+  html[data-theme="dark"] #theme-icon {
+    color: #FE6019 !important;
+  }
+</style>

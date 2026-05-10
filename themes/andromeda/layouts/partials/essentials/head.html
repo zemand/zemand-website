@@ -8,8 +8,8 @@
 
 <meta name="theme-name" content="andromeda-light-hugo" />
 
-<!-- favicon -->
-{{ partialCached "favicon" . }}
+<link rel="shortcut icon" href="{{ site.Params.favicon | relURL }}?v=2" type="image/x-icon">
+<link rel="icon" href="{{ site.Params.favicon | relURL }}?v=2" type="image/x-icon">
 
 
 <!-- manifest -->
@@ -51,7 +51,3 @@
 
 <!-- Counter Analytics -->
 {{ partialCached "counter-analytics.html" . }}
-
-
-<!-- Crisp Chat -->
-{{ partialCached "crisp-chat.html" . }}

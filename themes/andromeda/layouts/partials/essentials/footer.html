@@ -135,3 +135,47 @@
     </div>
   </div>
 </div>
+
+<script>
+  // 1. Чекаємо завантаження сторінки
+  window.addEventListener('load', function() {
+    const btn = document.getElementById('theme-toggle');
+    const icon = document.getElementById('theme-icon');
+    const html = document.documentElement;
+
+    // 2. Перевіряємо, чи ми бачимо кнопку
+    if (!btn) {
+      console.log("Помилка: Кнопку 'theme-toggle' не знайдено на сторінці!");
+      return;
+    }
+
+    // 3. Функція оновлення іконки
+    function setIcon(theme) {
+      if (theme === 'dark') {
+        icon.classList.remove('la-moon');
+        icon.classList.add('la-sun');
+        icon.style.color = '#FE6019'; // Помаранчеве сонце
+      } else {
+        icon.classList.remove('la-sun');
+        icon.classList.add('la-moon');
+        icon.style.color = '#444444'; // Темний місяць
+      }
+    }
+
+    // 4. Встановлюємо тему при старті
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    html.setAttribute('data-theme', currentTheme);
+    setIcon(currentTheme);
+
+    // 5. Логіка кліку
+    btn.onclick = function() {
+      const isDark = html.getAttribute('data-theme') === 'dark';
+      const nextTheme = isDark ? 'light' : 'dark';
+      
+      html.setAttribute('data-theme', nextTheme);
+      localStorage.setItem('theme', nextTheme);
+      setIcon(nextTheme);
+      console.log("Тему змінено на: " + nextTheme);
+    };
+  });
+</script>

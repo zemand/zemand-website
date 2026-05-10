@@ -16,12 +16,8 @@
 
 <meta name="theme-name" content="andromeda-light-hugo" />
 
-
-
-
-
-
-
+<link rel="shortcut icon" href="/images/favicon.png?v=2" type="image/x-icon">
+<link rel="icon" href="/images/favicon.png?v=2" type="image/x-icon">
 
 
 
@@ -20568,6 +20564,19 @@ iframe.wait-autoplay {
                 </select>
               </div>
             
+            
+  <ul class="list-inline mb-0 ms-lg-3">
+    
+    <li class="list-inline-item"><a class="text-uppercase" href="http://localhost:1313/blog/blog/">EN</a></li>
+    
+  </ul>
+
+
+<div class="ms-lg-3 d-inline-block">
+  <button id="theme-toggle" class="nav-theme-btn border-0 bg-transparent p-2" title="Змінити тему" style="cursor: pointer;">
+    <i id="theme-icon" class="las la-moon" style="font-size: 1.4rem; color: #444; transition: 0.3s;"></i>
+  </button>
+</div>
             <button
               class="navbar-toggler"
               type="button"
@@ -20737,54 +20746,6 @@ iframe.wait-autoplay {
               
             </ul>
 
-            <div class="navbar-right">
-              
-              
-                <div class="d-none d-lg-inline text-center">
-                  <select
-                    class="mx-3 border-0 font-weight-bold"
-                    id="select-language-"
-                    onchange="location = this.value;">
-                    
-                    
-                    
-                      
-                      
-                        
-                          
-                          
-                            <option
-                              id="uk"
-                              value="/uk/blog/blog/"
-                              selected>
-                              UA
-                            </option>
-                          
-                        
-                      
-                        
-                      
-                    
-                      
-                      
-                        
-                      
-                        
-                          
-                          
-                            <option
-                              id="en"
-                              value="/blog/blog/">
-                              EN
-                            </option>
-                          
-                        
-                      
-                    
-                  </select>
-                </div>
-              
-
               
             </div>
           </div>
@@ -20793,6 +20754,223 @@ iframe.wait-autoplay {
     </div>
   </div>
 </header>
+<style>
+   
+
+   
+  html[data-theme="dark"], 
+  html[data-theme="dark"] body {
+    background-color: #121212 !important;
+    color: #d1d1d1 !important;  
+  }
+
+   
+  html[data-theme="dark"] .header-nav,
+  html[data-theme="dark"] .navbar,
+  html[data-theme="dark"] .header-height-fix,
+  html[data-theme="dark"] .page-header,
+  html[data-theme="dark"] .nav-bg-dot,
+  html[data-theme="dark"] section {
+    background-color: #121212 !important;
+    background-image: none !important;
+    border-bottom-color: #2a2a2a !important;
+  }
+
+   
+  html[data-theme="dark"] h1, 
+  html[data-theme="dark"] h2, 
+  html[data-theme="dark"] h3, 
+  html[data-theme="dark"] h4, 
+  html[data-theme="dark"] .title,
+  html[data-theme="dark"] .nav-link,
+  html[data-theme="dark"] .navbar-brand {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+  }
+
+   
+  html[data-theme="dark"] .post-title a,
+  html[data-theme="dark"] .card-title a {
+    color: #ffffff !important;
+  }
+  
+  html[data-theme="dark"] .post-title a:hover {
+    color: #FE6019 !important;
+  }
+
+   
+  html[data-theme="dark"] .content, 
+  html[data-theme="dark"] .post-content {
+    color: #d1d1d1 !important;
+  }
+
+  html[data-theme="dark"] .content strong {
+    color: #ffffff !important;
+  }
+
+  html[data-theme="dark"] .content a:not(.btn) {
+    color: #FE6019 !important;
+    text-decoration: underline;
+  }
+
+   
+  html[data-theme="dark"] code, 
+  html[data-theme="dark"] pre {
+    background-color: #1a1a1a !important;
+    color: #FE6019 !important;
+    border: 1px solid #333 !important;
+  }
+
+   
+  html[data-theme="dark"] .card, 
+  html[data-theme="dark"] .post-item {
+    background-color: #161616 !important;
+    border: 1px solid #2a2a2a !important;
+  }
+
+  html[data-theme="dark"] .post-meta, 
+  html[data-theme="dark"] .post-meta span {
+    color: #888888 !important;
+  }
+
+   
+  html[data-theme="dark"] footer, 
+  html[data-theme="dark"] .footer {
+    background-color: #0c0c0c !important;
+    border-top: 1px solid #222 !important;
+  }
+
+  html[data-theme="dark"] footer h4, 
+  html[data-theme="dark"] footer h5,
+  html[data-theme="dark"] .footer-title {
+    color: #ffffff !important;
+  }
+
+  html[data-theme="dark"] footer p, 
+  html[data-theme="dark"] footer li a,
+  html[data-theme="dark"] .copyright-text {
+    color: #999999 !important;
+  }
+
+  html[data-theme="dark"] footer li a:hover {
+    color: #FE6019 !important;
+  }
+
+   
+  html[data-theme="dark"] #theme-icon {
+    color: #FE6019 !important;
+  }
+
+   
+  body {
+    transition: background-color 0.3s ease, color 0.3s ease !important;
+  }
+ 
+  html[data-theme="dark"] h1,
+  html[data-theme="dark"] h2,
+  html[data-theme="dark"] .text-dark,
+  html[data-theme="dark"] .text-black,
+  html[data-theme="dark"] .text-color,
+  html[data-theme="dark"] .content h1,
+  html[data-theme="dark"] .content h2,
+  html[data-theme="dark"] .section h1,
+  html[data-theme="dark"] .section h2 {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+   
+  html[data-theme="dark"] .post-meta,
+  html[data-theme="dark"] .post-meta li,
+  html[data-theme="dark"] .post-meta span,
+  html[data-theme="dark"] ul.list-inline.post-meta li,
+  html[data-theme="dark"] .card-meta {
+    color: #aaaaaa !important;
+  }
+
+   
+  html[data-theme="dark"] .post-item p,
+  html[data-theme="dark"] .post-item .content p,
+  html[data-theme="dark"] .card-body p,
+  html[data-theme="dark"] .card p,
+  html[data-theme="dark"] article p {
+    color: #cccccc !important;
+  }
+ 
+  html[data-theme="dark"] .breadcrumb-item,
+  html[data-theme="dark"] .breadcrumb-item a,
+  html[data-theme="dark"] .breadcrumb-item.active {
+    color: #eeeeee !important;
+  }
+
+   
+  html[data-theme="dark"] .post-meta,
+  html[data-theme="dark"] .post-meta *,
+  html[data-theme="dark"] .card-text,
+  html[data-theme="dark"] .post-item p {
+    color: #aaaaaa !important;
+  }
+
+   
+  html[data-theme="dark"] blockquote,
+  html[data-theme="dark"] blockquote p,
+  html[data-theme="dark"] blockquote cite,
+  html[data-theme="dark"] blockquote span {
+    color: #ffffff !important;
+  }
+  
+  html[data-theme="dark"] blockquote {
+    border-color: #FE6019 !important;  
+  }
+ 
+  html[data-theme="dark"] .post-meta,
+  html[data-theme="dark"] .post-meta li,
+  html[data-theme="dark"] .post-meta span,
+  html[data-theme="dark"] .post-meta a,
+  html[data-theme="dark"] .post-meta i,
+  html[data-theme="dark"] .post-meta p {
+    color: #aaaaaa !important;
+  }
+
+   
+  
+   
+  html[data-theme="dark"] form label,
+  html[data-theme="dark"] .contact-form label {
+    color: #eeeeee !important;
+  }
+
+   
+  html[data-theme="dark"] .form-control {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+    border: 1px solid #333333 !important;
+  }
+
+   
+  html[data-theme="dark"] .form-control:focus {
+    border-color: #FE6019 !important;  
+    background-color: #161616 !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 0 0.2rem rgba(254, 96, 25, 0.25) !important;  
+  }
+
+   
+  html[data-theme="dark"] .form-control::placeholder {
+    color: #777777 !important;
+  }
+ 
+  html[data-theme="dark"] .card-body .text-muted,
+  html[data-theme="dark"] .card-body .text-light,
+  html[data-theme="dark"] .card-body .text-dark,
+  html[data-theme="dark"] .card-body small,
+  html[data-theme="dark"] .card-body time,
+  html[data-theme="dark"] .post-author span,
+  html[data-theme="dark"] .post-author small {
+    color: #aaaaaa !important;
+  }
+
+</style>
 
 
     
@@ -25016,7 +25194,7 @@ iframe.wait-autoplay {
             href="/uk">
             
           </a>
-          <p class="mb-0">Lorem ipsum dolor sit sed dmi amet, consectetur adipiscing. Cdo tellus, sed condimentum volutpat.</p>
+          <p class="mb-0">Будь-хто, хто перестає вчитися, старіє, неважливо, у 20 чи 80 років. Будь-хто, хто продовжує вчитися, залишається молодим. — Генрі Форд</p>
         </div>
       </div>
       <div class="col-lg-3 col-md-6 col-sm-6 mt-5 mt-sm-0">
@@ -25027,7 +25205,7 @@ iframe.wait-autoplay {
             <ul class="footer-links list-unstyled mb-4">
               
                 
-                  <li><a href="mailto:info@andromeda.io">info@andromeda.io</a></li>
+                  <li><a href="mailto:info@zemandautomation.com">info@zemandautomation.com</a></li>
                 
               
             </ul>
@@ -25093,10 +25271,10 @@ iframe.wait-autoplay {
 
           
             <ul class="footer-links list-unstyled">
-              <li>2118 Thornridge Cir. Syracuse, Connecticut 35624</li>
+              <li>Irpin</li>
               
                 
-                  <li><a href="tel:&#43;704-555-0127">&#43;704-555-0127</a></li>
+                  <li><a href="tel:&#43;380%2063%20461075">&#43;380 63 461075</a></li>
                 
               
             </ul>
@@ -25119,6 +25297,49 @@ iframe.wait-autoplay {
   </div>
 </div>
 
+<script>
+  
+  window.addEventListener('load', function() {
+    const btn = document.getElementById('theme-toggle');
+    const icon = document.getElementById('theme-icon');
+    const html = document.documentElement;
+
+    
+    if (!btn) {
+      console.log("Помилка: Кнопку 'theme-toggle' не знайдено на сторінці!");
+      return;
+    }
+
+    
+    function setIcon(theme) {
+      if (theme === 'dark') {
+        icon.classList.remove('la-moon');
+        icon.classList.add('la-sun');
+        icon.style.color = '#FE6019'; 
+      } else {
+        icon.classList.remove('la-sun');
+        icon.classList.add('la-moon');
+        icon.style.color = '#444444'; 
+      }
+    }
+
+    
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    html.setAttribute('data-theme', currentTheme);
+    setIcon(currentTheme);
+
+    
+    btn.onclick = function() {
+      const isDark = html.getAttribute('data-theme') === 'dark';
+      const nextTheme = isDark ? 'light' : 'dark';
+      
+      html.setAttribute('data-theme', nextTheme);
+      localStorage.setItem('theme', nextTheme);
+      setIcon(nextTheme);
+      console.log("Тему змінено на: " + nextTheme);
+    };
+  });
+</script>
     
   </body>
 </html>
