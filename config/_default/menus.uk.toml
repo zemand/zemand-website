@@ -46,17 +46,23 @@ hasChildren = true
   url = "/categories/energy-management/"
   weight = 4
 
+   [[main]]
+  parent = "Категорії"
+  name = "Кібербезпека"
+  url = "/categories/cybersecurity/"
+  weight = 5
+
   [[main]]
   parent = "Категорії"
   name = "Широкий кут"
   url = "/categories/the-big-picture/"
-  weight = 5
+  weight = 6
 
   [[main]]
   parent = "Категорії"
   name = "Пісочниця"
   url = "/categories/sandbox/"
-  weight = 6
+  weight = 7
 
 
 [[main]]

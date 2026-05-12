@@ -48,15 +48,21 @@ hasChildren = true
 
   [[main]]
   parent = "Categories"
+  name = "Cybersecurity"
+  url = "/categories/cybersecurity/"
+  weight = 5
+
+  [[main]]
+  parent = "Categories"
   name = "The Big Picture"
   url = "/categories/the-big-picture/"
-  weight = 5
+  weight = 6
 
   [[main]]
   parent = "Categories"
   name = "Sandbox"
   url = "/categories/sandbox/"
-  weight = 6
+  weight = 7
 
 
 [[main]]
