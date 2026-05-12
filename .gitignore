@@ -1,0 +1,16 @@
+# Hugo
+public/
+resources/_gen/
+.hugo_build.lock
+
+# JavaScript / Node
+node_modules/
+dist/
+
+# Тимчасові файли та деби
+*.deb
+.DS_Store
+Thumbs.db
+
+# Кеш
+.cache/

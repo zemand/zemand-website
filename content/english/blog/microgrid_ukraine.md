@@ -1,7 +1,7 @@
 ---
 date: "2021-07-13"
 title: "Microgrin in Ukraine"
-categories: ["Microgrid"] # Тепер стаття належить до категорії Microgrid
+categories: ["Energy Management"] # Тепер стаття належить до категорії Microgrid
 image: "images/blog/02.jpg"
 author: "andrii-zemlianyi"
 draft: false

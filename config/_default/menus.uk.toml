@@ -8,13 +8,13 @@ weight = 1
 
 [[main]]
 name = "Про компанію"
-url = "about/"
+url = "/about/"
 weight = 2
 
 
 [[main]]
 name = "Блог"
-url = "blog/"
+url = "/blog/"
 weight = 3
 
 [[main]]
@@ -24,21 +24,38 @@ hasChildren = true
 
   [[main]]
   parent = "Категорії"
-  name = "Загальні статті"
-  url = "categories/general"
+  name = "Промислова автоматизація"
+  url = "/categories/industrial-automation/"
   weight = 1
-
 
   [[main]]
   parent = "Категорії"
-  name = "Мікромережа"
-  url = "categories/microgrid/"
+  name = "ШІ та Робототехніка"
+  url = "/categories/ai-robotics"
   weight = 2
+
+  [[main]]
+  parent = "Категорії"
+  name = "Енергоменеджмент"
+  url = "/categories/energy-management/"
+  weight = 3
+
+  [[main]]
+  parent = "Категорії"
+  name = "Широкий кут"
+  url = "/categories/the-big-picture/"
+  weight = 4
+
+  [[main]]
+  parent = "Категорії"
+  name = "Пісочниця"
+  url = "/categories/sandbox/"
+  weight = 5
 
 
 [[main]]
 name = "Контакти"
-url = "contact/"
+url = "/contact/"
 weight = 5
 
 

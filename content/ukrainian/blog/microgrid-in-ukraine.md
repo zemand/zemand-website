@@ -1,8 +1,8 @@
 ---
 date: "2026-05-01"
-title: "Навіщо цей блог?"
-categories: ["The Big Picture"]
-image: "images/blog/01.jpg"
+title: "Мікромережі в Україні"
+categories: ["Energy Management"]
+image: "images/blog/02.jpg"
 author: "andrii-zemlianyi"
 draft: false
 ---

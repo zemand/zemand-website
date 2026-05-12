@@ -1,5 +1,5 @@
 ---
-title: "Blog"
-description: "meta description"
+title: "Всі статті"
+description: "опис блогу"
 draft: false
 ---

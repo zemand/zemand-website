@@ -1,7 +1,7 @@
 ---
 date: "2026-05-01"
 title: "IEC standarts for Microgrid"
-categories: ["Microgrid"] # Тепер стаття належить до категорії Microgrid
+categories: ["Energy Management"] # Тепер стаття належить до категорії Microgrid
 image: "images/blog/02.jpg"
 author: "andrii-zemlianyi"
 draft: false

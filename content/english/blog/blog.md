@@ -1,7 +1,7 @@
 ---
 date: "2021-07-14"
 title: "The Real Product From the Buyers improvements in Overflow basis."
-categories: ["General"] # Тепер стаття належить до категорії General
+categories: ["The Big Picture"]
 image: "images/blog/01.jpg"
 author: "andrii-zemlianyi"
 draft: false

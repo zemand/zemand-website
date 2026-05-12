@@ -8,13 +8,13 @@ weight = 1
 
 [[main]]
 name = "About"
-url = "about/"
+url = "/about/"
 weight = 2
 
 
 [[main]]
 name = "Blog"
-url = "blog/"
+url = "/blog/"
 weight = 3
 
 [[main]]
@@ -24,21 +24,38 @@ hasChildren = true
 
   [[main]]
   parent = "Categories"
-  name = "General"
-  url = "categories/general/"
+  name = "Industrial Automation"
+  url = "/categories/industrial-automation/"
   weight = 1
-
 
   [[main]]
   parent = "Categories"
-  name = "Microgrid"
-  url = "categories/microgrid/"
+  name = "AI & Robotics"
+  url = "/categories/ai-robotics"
   weight = 2
+
+  [[main]]
+  parent = "Categories"
+  name = "Energy Management"
+  url = "/categories/energy-management/"
+  weight = 3
+
+  [[main]]
+  parent = "Categories"
+  name = "The Big Picture"
+  url = "/categories/the-big-picture/"
+  weight = 4
+
+  [[main]]
+  parent = "Categories"
+  name = "Sandbox"
+  url = "/categories/sandbox/"
+  weight = 5
 
 
 [[main]]
 name = "Contact"
-url = "contact/"
+url = "/contact/"
 weight = 5
 
 
