@@ -1,5 +1,6 @@
 ---
-title: "All about Blog"
+title: "All about Robotics"
+slug: "ai-robotics"
 description: "Desc Blog..."
 image: "images/categories/microgrid-main.jpg"
 layout: "list"

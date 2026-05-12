@@ -1,7 +1,6 @@
 ---
-title: "All about AI & Robotics"
-slug: "ai-robotics"
-description: "Desc Blog..."
+title: "All about Robotics"
+description: "Desc Robotics..."
 image: "images/categories/microgrid-main.jpg"
 layout: "list"
 ---
