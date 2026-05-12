@@ -30,27 +30,33 @@ hasChildren = true
 
   [[main]]
   parent = "Категорії"
-  name = "ШІ та Робототехніка"
-  url = "/categories/ai-robotics"
+  name = "ШІ та Комп’ютерний зір"
+  url = "/categories/ai-computer-vision"
   weight = 2
+
+    [[main]]
+  parent = "Категорії"
+  name = "Робототехніка"
+  url = "/categories/robotics"
+  weight = 3
 
   [[main]]
   parent = "Категорії"
   name = "Енергоменеджмент"
   url = "/categories/energy-management/"
-  weight = 3
+  weight = 4
 
   [[main]]
   parent = "Категорії"
   name = "Широкий кут"
   url = "/categories/the-big-picture/"
-  weight = 4
+  weight = 5
 
   [[main]]
   parent = "Категорії"
   name = "Пісочниця"
   url = "/categories/sandbox/"
-  weight = 5
+  weight = 6
 
 
 [[main]]
