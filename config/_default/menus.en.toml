@@ -30,27 +30,33 @@ hasChildren = true
 
   [[main]]
   parent = "Categories"
-  name = "AI & Robotics"
-  url = "/categories/ai-robotics"
+  name = "AI & Computer Vision"
+  url = "/categories/ai-computer-vision"
   weight = 2
+  
+  [[main]]
+  parent = "Categories"
+  name = "Robotics"
+  url = "/categories/robotics"
+  weight = 3
 
   [[main]]
   parent = "Categories"
   name = "Energy Management"
   url = "/categories/energy-management/"
-  weight = 3
+  weight = 4
 
   [[main]]
   parent = "Categories"
   name = "The Big Picture"
   url = "/categories/the-big-picture/"
-  weight = 4
+  weight = 5
 
   [[main]]
   parent = "Categories"
   name = "Sandbox"
   url = "/categories/sandbox/"
-  weight = 5
+  weight = 6
 
 
 [[main]]
