@@ -1,16 +1,17 @@
 ################################### Languages #####################################
 
 [uk]
-  languageCode = "uk-ua"
-  languageName = "UA"
+  locale = "uk-ua"
+  label = "UA"
   contentDir = "content/ukrainian"
   weight = 1
   copyright = "Designed By [Themefisher](https://themefisher.com/) & Developed By [Gethugothemes](https://gethugothemes.com/)"
 
 [en]
-  languageCode = "en-us"
-  languageName = "EN"
+  locale = "en-us"
+  label = "EN"
   contentDir = "content/english"
   weight = 2
   copyright = "Designed By [Themefisher](https://themefisher.com/) & Developed By [Gethugothemes](https://gethugothemes.com/)"
+
 

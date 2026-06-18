@@ -3,6 +3,10 @@ public/
 resources/_gen/
 .hugo_build.lock
 
+# Obsidian
+**/.obsidian/
+**/.trash/
+
 # JavaScript / Node
 node_modules/
 dist/
