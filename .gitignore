@@ -18,3 +18,5 @@ Thumbs.db
 
 # Кеш
 .cache/
+copilot/
+.obsidian/
