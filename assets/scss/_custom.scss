@@ -24,10 +24,6 @@ html:not([data-theme="dark"]) {
   }
 }
 
-html:not([data-theme="dark"]) .features-card {
-  background-color: $white;
-}
-
 // topic card titles are links: same color as the heading
 .features-card .title a {
   color: inherit !important;
@@ -655,23 +651,22 @@ html[data-theme="dark"] .preloader {
     margin-bottom: 1rem;
   }
 
-  .post-byline {
-    margin: 0;
-    font-size: 0.9375rem;
-
-    a {
-      font-weight: 600;
-    }
-
-    span {
-      margin: 0 0.4rem;
-    }
+  .post-author time {
+    font-size: 0.875rem;
   }
 }
 
-html[data-theme="dark"] .post-byline,
-html[data-theme="dark"] .post-byline a {
-  color: var(--dark-muted) !important;
+html[data-theme="dark"] .post-author time {
+  color: var(--dark-muted);
+}
+
+// Light theme: topic and intro cards without the white fill, just the border
+html:not([data-theme="dark"]) .features-card {
+  background-color: transparent !important;
+
+  .icon {
+    background-color: $white;
+  }
 }
 
 // Borders with a bit more contrast (cards, icon boxes, lines, round icons)

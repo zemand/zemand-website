@@ -16,14 +16,28 @@
             <div class="post-header mb-5">
               {{ partial "components/category-chips.html" . }}
               <h1 class="post-header-title">{{ .Title | markdownify }}</h1>
-              <p class="post-byline">
-                {{ $authorPath := printf "/author/%s" (.Params.author | urlize | lower) }}
-                {{ with site.GetPage $authorPath }}
-                  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                  <span aria-hidden="true">·</span>
-                {{ end }}
-                <time datetime="{{ .PublishDate.Format "2006-01-02" }}">{{ .PublishDate | time.Format ":date_long" }}</time>
-              </p>
+              {{/* author with photo and date, same as on the post cards */}}
+              {{ $date := . }}
+              {{ $authorPath := printf "/author/%s" (.Params.author | urlize | lower) }}
+              <div class="card-author post-author">
+                <div class="d-flex align-items-center">
+                  {{ with site.GetPage $authorPath }}
+                    <div class="user-image me-3">
+                      <a href="{{ .RelPermalink }}" title="{{ .Title }}">
+                        {{ with .Params.image }}
+                          {{ partial "image.html" (dict "Src" . "Alt" "" "Class" "rounded-circle" "Size" "70x70") }}
+                        {{ end }}
+                      </a>
+                    </div>
+                  {{ end }}
+                  <div class="user-info">
+                    {{ with site.GetPage $authorPath }}
+                      <p class="fw-500 mb-0"><a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
+                    {{ end }}
+                    <time datetime="{{ $date.PublishDate.Format "2006-01-02" }}">{{ $date.PublishDate | time.Format ":date_long" }}</time>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div class="content">
