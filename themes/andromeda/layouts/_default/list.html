@@ -1,14 +1,16 @@
 {{ define "main" }}
 
-{{/* category pages start with their own intro card instead of the page header */}}
-{{ if ne .Kind "term" }}
+{{/* category pages, and list pages with an icon (e.g. Blog), start with
+     their own intro card instead of the page header */}}
+{{ $introCard := or (eq .Kind "term") .Params.icon }}
+{{ if not $introCard }}
   {{ partial "components/page-header.html" . }}
 {{ end }}
 
 {{ if or (eq .Section "post") (eq .Section "posts") (eq .Section "blog") (eq .Section "blogs") (eq .Section "news") (eq .Section "categories") (eq .Section "tags") }}
 
 {{/* category intro: same icon card as the topic cards on Home */}}
-{{ if eq .Kind "term" }}
+{{ if $introCard }}
 <section class="section-sm pb-0 features">
   <div class="container-xxl">
     <div class="row justify-content-center">
