@@ -4,6 +4,28 @@
 
 {{ if or (eq .Section "post") (eq .Section "posts") (eq .Section "blog") (eq .Section "blogs") (eq .Section "news") (eq .Section "categories") (eq .Section "tags") }}
 
+{{/* category intro: same icon card as the topic cards on Home */}}
+{{ if and (eq .Kind "term") (or .Params.icon .Description) }}
+<section class="section-sm pb-0 features">
+  <div class="container-xxl">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-8" data-aos="fade-up">
+        <div class="features-card my-0">
+          {{ with .Params.icon }}
+          <div class="icon text-primary">
+            <i class="{{ . }}" aria-hidden="true"></i>
+          </div>
+          {{ end }}
+          {{ with .Description }}
+          <p class="mb-0 {{ if $.Params.icon }}mt-4{{ end }}">{{ . | markdownify }}</p>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
 {{ if .Content }}
 <section class="section-sm pb-0">
   <div class="container-xxl">

@@ -1,5 +1,6 @@
 ---
 title: "Широкий кут"
 description: "Думки, що не вписуються в одну категорію."
+icon: "las la-globe"
 layout: "list"
 ---
