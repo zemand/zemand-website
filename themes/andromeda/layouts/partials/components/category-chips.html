@@ -1,0 +1,16 @@
+{{/* Category chips for a post. Context: the post page.
+     Uses the category page for the localized title and link. */}}
+{{ with .Params.categories }}
+  <ul class="category-chips">
+    {{ range . }}
+      {{ $term := site.GetPage (printf "/categories/%s" (urlize .)) }}
+      <li>
+        {{ with $term }}
+          <a class="category-chip" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ else }}
+          <span class="category-chip">{{ . }}</span>
+        {{ end }}
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}

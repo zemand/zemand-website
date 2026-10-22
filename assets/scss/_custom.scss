@@ -1,10 +1,11 @@
 // Brand palette from the logo: orange $color-primary (#FF7A2B, hugo.toml),
-// navy #0F2A47, slate #5B6B7F.
-// Contrast (WCAG AA): white on #FF7A2B is only 2.6:1, so white text on orange
-// and orange text on white use a darker shade (4.7:1).
-$color-primary-strong: #c2500f;
+// navy #0F2A47, slate #5B6B7F, light blue-gray #EEF2F7 (round logo background).
+// Orange is always the logo orange. It is too light for small text on light
+// backgrounds (2.3-2.6:1), so in the light theme it is used for fills,
+// underlines, borders and icons; text on orange is navy (5.6:1).
 $brand-navy: #0f2a47;
-$text-color: #5b6b7f; // 5.5:1 on white
+$brand-light-bg: #eef2f7;
+$text-color: #5b6b7f; // 4.9:1 on #EEF2F7, 5.5:1 on white
 
 body,
 a,
@@ -12,12 +13,41 @@ a,
   color: $text-color;
 }
 
+// Light theme background: the round logo's light blue-gray; cards stay white
+html:not([data-theme="dark"]) {
+  &,
+  body,
+  .header-nav,
+  .header-height-fix {
+    background-color: $brand-light-bg;
+  }
+}
+
+html:not([data-theme="dark"]) .features-card {
+  background-color: $white;
+}
+
+// topic card titles are links: same color as the heading
+.features-card .title a {
+  color: inherit !important;
+}
+
+// Orange fills with navy text: buttons, active page, chips
 .btn.btn-primary,
 .pagination .page-link.active,
 .pagination .page-link:hover,
 .pagination .page-link:focus,
 .badge.bg-primary {
-  background-color: $color-primary-strong !important;
+  background-color: $color-primary !important;
+  color: $brand-navy !important;
+}
+
+.btn.btn-primary {
+  &:hover,
+  &:focus,
+  &:active {
+    color: $brand-navy !important;
+  }
 }
 
 // Light theme: navy headings and navigation, as in the logo
@@ -29,28 +59,49 @@ html:not([data-theme="dark"]) {
   h5,
   h6,
   .title,
-  .card-title a {
-    color: $brand-navy;
-  }
-
-  .nav-item .nav-link:not(:hover) {
+  .card-title a,
+  .nav-item .nav-link,
+  span.text-primary {
     color: $brand-navy !important;
   }
 
-  .nav-item.active .nav-link {
-    color: $color-primary-strong !important;
+  // current page and hover in the menu: orange underline instead of orange text
+  .nav-item .nav-link:hover,
+  .nav-item.active > .nav-link,
+  .dropdown-item:hover,
+  .dropdown-item:focus,
+  .dropdown-item.active,
+  .link-primary {
+    color: $brand-navy !important;
+    text-decoration: underline;
+    text-decoration-color: $color-primary;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.35em;
   }
 
-  // icons and highlighted words in orange: the logo orange is 2.6:1 on white
-  .icon.text-primary,
-  span.text-primary {
-    color: $color-primary-strong !important;
+  .pagination .page-link:not(.active):not(:hover):not(:focus),
+  .btn.btn-outline-primary:not(:hover):not(:focus) {
+    color: $brand-navy !important;
   }
 }
 
-// play button: white icon on the darker orange (both themes)
+.btn.btn-outline-primary {
+  border-color: $color-primary;
+
+  &::after {
+    background-color: $color-primary !important;
+  }
+
+  &:hover,
+  &:focus {
+    color: $brand-navy !important;
+  }
+}
+
+// play button: navy icon on the logo orange
 .video-play-btn {
-  background-color: $color-primary-strong !important;
+  background-color: $color-primary !important;
+  color: $brand-navy !important;
 }
 
 // Logo: light version in the light theme, dark version in the dark theme
@@ -99,12 +150,12 @@ html[data-theme="dark"] {
   margin-top: 2.5rem;
   padding: 0.95rem 1.75rem 0.95rem 2rem;
   border-radius: 999px;
-  background-color: $color-primary-strong;
-  color: $white !important;
+  background-color: $color-primary;
+  color: $brand-navy !important;
   font-weight: 600;
   font-size: 1rem;
   letter-spacing: 0.01em;
-  box-shadow: 0 0.5rem 1.5rem rgba($color-primary, 0.3);
+  box-shadow: 0 0.5rem 1.5rem rgba($color-primary, 0.35);
   transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 
   i {
@@ -114,7 +165,7 @@ html[data-theme="dark"] {
     width: 1.75rem;
     height: 1.75rem;
     border-radius: 50%;
-    background-color: rgba($white, 0.18);
+    background-color: rgba($brand-navy, 0.12);
     font-size: 1rem;
     transition: transform 0.2s ease;
   }
@@ -123,7 +174,7 @@ html[data-theme="dark"] {
   &:focus-visible {
     transform: translateY(-2px);
     box-shadow: 0 0.75rem 2rem rgba($color-primary, 0.4);
-    background-color: darken($color-primary-strong, 4%);
+    background-color: lighten($color-primary, 4%);
 
     i {
       transform: translateX(4px);
@@ -153,29 +204,6 @@ html[data-theme="dark"] {
 // Links: lower specificity in dark mode so component colors (.btn etc.) still win
 :where(html[data-theme="dark"]) a {
   color: var(--dark-text);
-}
-
-// Primary-colored text on white (light theme only; dark theme keeps the bright accent)
-html:not([data-theme="dark"]) {
-  .btn.btn-outline-primary:not(:hover):not(:focus),
-  .pagination .page-link:not(.active):not(:hover):not(:focus),
-  .nav-item .nav-link:hover,
-  .nav-item.active .nav-link,
-  .dropdown-item:hover,
-  .dropdown-item:focus,
-  .dropdown-item.active,
-  .link-primary,
-  .contact-widget a {
-    color: $color-primary-strong !important;
-  }
-}
-
-.btn.btn-outline-primary {
-  border-color: $color-primary-strong;
-
-  &::after {
-    background-color: $color-primary-strong !important;
-  }
 }
 
 // Dark theme: html[data-theme="dark"] is set in partials/essentials/head.html
@@ -540,7 +568,7 @@ html[data-theme="dark"] .has-circle {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $white;
+  background-color: $brand-light-bg;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 
   img {
@@ -571,4 +599,76 @@ html[data-theme="dark"] .preloader {
   .preloader img {
     animation: none;
   }
+}
+
+// Category chips: on the post card image and above the post title
+.category-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.category-chip {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  background-color: $color-primary;
+  color: $brand-navy !important;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.3;
+  text-decoration: none !important;
+  transition: background-color 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    background-color: lighten($color-primary, 6%);
+  }
+}
+
+.blog-card-media {
+  position: relative;
+
+  .category-chips {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+  }
+
+  .category-chip {
+    box-shadow: 0 0.25rem 0.75rem rgba($brand-navy, 0.25);
+  }
+}
+
+// Post page: chips, title, then "author · date"
+.post-header {
+  .category-chips {
+    margin-bottom: 1.25rem;
+  }
+
+  .post-header-title {
+    margin-bottom: 1rem;
+  }
+
+  .post-byline {
+    margin: 0;
+    font-size: 0.9375rem;
+
+    a {
+      font-weight: 600;
+    }
+
+    span {
+      margin: 0 0.4rem;
+    }
+  }
+}
+
+html[data-theme="dark"] .post-byline,
+html[data-theme="dark"] .post-byline a {
+  color: var(--dark-muted) !important;
 }

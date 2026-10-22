@@ -13,14 +13,17 @@
             {{ end }}
           </div>
           <div class="col-lg-8">
-            <div class="mb-5">
-              <h2>{{ .Title | markdownify }}</h2>
-                            {{ $authorPath := printf "/author/%s" (.Params.author | urlize | lower) }}
-{{ with site.GetPage $authorPath }}
-  <div class="author-block">
-    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-  </div>
-{{ end }}
+            <div class="post-header mb-5">
+              {{ partial "components/category-chips.html" . }}
+              <h1 class="post-header-title">{{ .Title | markdownify }}</h1>
+              <p class="post-byline">
+                {{ $authorPath := printf "/author/%s" (.Params.author | urlize | lower) }}
+                {{ with site.GetPage $authorPath }}
+                  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                  <span aria-hidden="true">·</span>
+                {{ end }}
+                <time datetime="{{ .PublishDate.Format "2006-01-02" }}">{{ .PublishDate | time.Format ":date_long" }}</time>
+              </p>
             </div>
 
             <div class="content">
