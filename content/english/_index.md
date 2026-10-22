@@ -65,20 +65,18 @@ intro_video:
 how_it_works:
   enable: true
   block:
-  - subtitle: "TODO"
-    title: "TODO: first highlight"
-    description: "TODO: add text for this block, or disable the section."
-    image: "images/features-01.png"
+  - subtitle: "Why this blog"
+    title: "Learning by explaining"
+    description: "I started this blog because I love finding things out and explaining them to others. Writing makes me understand a topic properly, and if it helps someone else, even better. Here I share what I discover, in plain language."
 
-  - subtitle: "TODO"
-    title: "TODO: second highlight"
-    description: "TODO: add text for this block, or disable the section."
-    image: "images/features-02.png"
+  - subtitle: "Vision"
+    title: "Automation that sees, adapts and learns"
+    description: "I believe the automation of the future will not just follow programs: it will see, adapt and learn. Classical control and AI will work together, and cybersecurity and energy efficiency will be built in from the start. <!-- TODO: refine your own vision --> ZEMAND Automation is the place where I collect these ideas. <!-- TODO: mention plans to grow it into a company, if you want -->"
 
 
 # testimonials
 testimonials:
-  enable: true
+  enable: false # hidden until there are real testimonials
   subtitle: "TODO"
   title: "TODO: testimonials"
   description: "TODO: add real testimonials, or disable this section."

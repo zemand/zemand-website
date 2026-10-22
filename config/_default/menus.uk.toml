@@ -7,11 +7,6 @@ url = "/"
 weight = 1
 
 [[main]]
-name = "Про мене"
-url = "/about/"
-weight = 2
-
-[[main]]
 name = "Блог"
 url = "/blog/"
 weight = 3

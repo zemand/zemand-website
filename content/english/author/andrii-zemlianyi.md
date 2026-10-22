@@ -11,4 +11,9 @@ social:
     link: "https://github.com/zemand"
 ---
 
-Industrial automation engineer. I work with PLCs and automated systems and write about how AI, Computer Vision and robotics are changing the factory floor, in plain language.
+Hi, I'm Andrii, an industrial automation engineer. I work with PLCs and automated systems, and I am increasingly drawn to how AI, Computer Vision and robotics are changing the factory floor. <!-- TODO: years of experience, specialisation, location -->
+
+> "Anyone who stops learning is old, whether at twenty or eighty. Anyone who keeps learning stays young."
+> — Henry Ford (attributed)
+
+When you learn, you live. That is what this site is about.

@@ -65,20 +65,18 @@ intro_video:
 how_it_works:
   enable: true
   block:
-  - subtitle: "TODO"
-    title: "TODO: перший блок"
-    description: "TODO: додайте текст для цього блоку або вимкніть секцію."
-    image: "images/features-01.png"
+  - subtitle: "Навіщо цей блог"
+    title: "Вчуся, пояснюючи"
+    description: "Я почав цей блог, бо люблю розбиратися в речах і пояснювати їх іншим. Коли пишу, я справді розумію тему, а якщо це допоможе ще комусь, то тим краще. Тут я ділюся тим, що відкриваю для себе, простою мовою."
 
-  - subtitle: "TODO"
-    title: "TODO: другий блок"
-    description: "TODO: додайте текст для цього блоку або вимкніть секцію."
-    image: "images/features-02.png"
+  - subtitle: "Бачення"
+    title: "Автоматизація, що бачить, адаптується і вчиться"
+    description: "Я вірю, що автоматизація майбутнього не просто виконуватиме програми: вона бачитиме, адаптуватиметься і вчитиметься. Класичне керування та ШІ працюватимуть разом, а кібербезпека й енергоефективність будуть закладені з самого початку. <!-- TODO: refine your own vision --> ZEMAND Automation — це місце, де я збираю ці ідеї. <!-- TODO: mention plans to grow it into a company, if you want -->"
 
 
 # testimonials
 testimonials:
-  enable: true
+  enable: false # hidden until there are real testimonials
   subtitle: "TODO"
   title: "TODO: відгуки"
   description: "TODO: додайте справжні відгуки або вимкніть цю секцію."

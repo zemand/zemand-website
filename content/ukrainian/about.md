@@ -1,7 +1,7 @@
 ---
 title: "Про мене"
 layout: "about"
-draft: false
+draft: true # hidden for now: text moved to Home and the author page
 
 # who_we_are
 who_we_are:
