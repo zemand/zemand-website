@@ -1,5 +1,5 @@
 ---
-date: "2021-07-13"
+date: "2026-05-01"
 title: "Microgrin in Ukraine"
 categories: ["Energy Management"] # Тепер стаття належить до категорії Microgrid
 image: "images/blog/02.jpg"
