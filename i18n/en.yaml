@@ -54,3 +54,21 @@
 
 - id: toggle_theme
   translation: Toggle light/dark theme
+
+- id: home
+  translation: Home
+
+- id: page_not_found
+  translation: Page not found
+
+- id: back_to_home
+  translation: Back to home
+
+- id: previous_page
+  translation: Previous page
+
+- id: next_page
+  translation: Next page
+
+- id: toggle_navigation
+  translation: Toggle navigation

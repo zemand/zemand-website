@@ -153,7 +153,7 @@
                   {{ range .brand_images }}
                     <div class="swiper-slide">
                       <div class="brand-item">
-                        {{ partial "image.html" (dict "Src" . "Alt" "Brand Image") }}
+                        {{ partial "image.html" (dict "Src" . "Alt" "") }}
                       </div>
                     </div>
                   {{ end }}
@@ -231,7 +231,7 @@
                     data-src="{{ .video_url }}">
                     <i class="las la-play"></i>
                   </button>
-                  {{ partial "image.html" (dict "Src" .video_thumbnail "Alt" "Video Thumbnail" "Class" "video-thumb" "Size" "700x") }}
+                  {{ partial "image.html" (dict "Src" .video_thumbnail "Alt" "" "Class" "video-thumb" "Size" "700x") }}
                 </div>
               </div>
 
@@ -309,7 +309,7 @@
                       width="{{ $img.Width }}"
                       height="{{ $img.Height }}"
                       src="{{ $img.RelPermalink }}"
-                      alt="Video Thumbnail"
+                      alt=""
                       onerror="this.onerror=null;this.src='{{ $img.RelPermalink }}'" />
                   {{ end }}
                 </div>
@@ -342,7 +342,7 @@
               class="col-xl-4 col-md-3 d-none d-lg-block"
               data-aos="fade-up"
               data-aos-delay="50">
-              {{ partial "image.html" (dict "Src" .image_left "Alt" "testimonials" "Size" "445x") }}
+              {{ partial "image.html" (dict "Src" .image_left "Alt" "" "Size" "445x") }}
             </div>
 
             <div
@@ -356,7 +356,7 @@
                         <i class="quote-icon las la-quote-left"></i>
                         <p class="quote-text">{{ .quote }}</p>
                         <span class="author">
-                          {{ partial "image.html" (dict "Src" .image "Alt" "customer image" "Class" "rounded-circle" "Size" "90x") }}
+                          {{ partial "image.html" (dict "Src" .image "Alt" .name "Class" "rounded-circle" "Size" "90x") }}
                           <h5>{{ .name | markdownify }}</h5>
                           <p>{{ .designation | markdownify }}</p>
                         </span>
@@ -383,7 +383,7 @@
               class="col-xl-4 col-md-3 d-none d-lg-block"
               data-aos="fade-up"
               data-aos-delay="150">
-              {{ partial "image.html" (dict "Src" .image_right "Alt" "testimonials" "Size" "445x") }}
+              {{ partial "image.html" (dict "Src" .image_right "Alt" "" "Size" "445x") }}
             </div>
           </div>
         </div>

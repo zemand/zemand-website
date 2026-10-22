@@ -9,7 +9,7 @@
           class="col-lg-5 col-md-8 text-center mb-5 mb-lg-0"
           data-aos="fade-up">
           <div class="pe-0 pe-lg-5">
-            {{ partial "image.html" (dict "Src" .Params.contact_image "Alt" "contact image" "Size" "575x") }}
+            {{ partial "image.html" (dict "Src" .Params.contact_image "Alt" "" "Size" "575x") }}
           </div>
         </div>
         {{ with site.Params.contact_form_action }}
@@ -56,7 +56,7 @@
                 <button
                   class="btn btn-primary w-100 mt-4"
                   type="submit"
-                  aria-label="Send Message">
+                  aria-label="{{ T `send_message` }}">
                   {{ T `send_message` }}
                 </button>
               </form>

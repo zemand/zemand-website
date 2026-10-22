@@ -19,7 +19,7 @@
               data-aos-delay="150">
               <div class="about-image">
                 <div class="block">
-                  {{ partial "image.html" (dict "Src" .image "Alt" "about-image" "Size" "464x") }}
+                  {{ partial "image.html" (dict "Src" .image "Alt" .title "Size" "464x") }}
 
                   <div class="has-circle">
                     <span class="circle-4 ratio-20 fill"></span>
@@ -75,7 +75,7 @@
             <div class="col-lg-5 col-md-6" data-aos="fade-up">
               <div class="about-image">
                 <div class="block">
-                  {{ partial "image.html" (dict "Src" .image "Alt" "about-image" "Size" "4645x") }}
+                  {{ partial "image.html" (dict "Src" .image "Alt" .title "Size" "4645x") }}
 
 
                   <div class="has-circle">
@@ -138,7 +138,7 @@
                         data-src="{{ .video_url }}">
                         <i class="las la-play"></i>
                       </button>
-                      {{ partial "image.html" (dict "Src" .video_thumbnail "Alt" "Video Thumbnail" "Class" "video-thumb"
+                      {{ partial "image.html" (dict "Src" .video_thumbnail "Alt" "" "Class" "video-thumb"
                         "Size" "700x")
                       }}
                     </div>
@@ -202,7 +202,7 @@
                       {{ range .brand_images }}
                         <div class="swiper-slide">
                           <div class="brand-item">
-                            {{ partial "image.html" (dict "Src" . "Alt" "Brand Image") }}
+                            {{ partial "image.html" (dict "Src" . "Alt" "") }}
                           </div>
                         </div>
                       {{ end }}
@@ -235,7 +235,7 @@
               <div class="col-lg-3 col-md-4 col-6">
                 <div class="team-item text-center">
                   <div class="team-image">
-                    {{ partial "image.html" (dict "Src" .image "Alt" "Video Thumbnail" "Class" "w-100 rounded-circle" "Size"
+                    {{ partial "image.html" (dict "Src" .image "Alt" .name "Class" "w-100 rounded-circle" "Size"
                       "175x")
                     }}
                   </div>
@@ -269,7 +269,7 @@
                 {{ range .office_locations }}
                   <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="office-loc-item">
-                      {{ partial "image.html" (dict "Src" .country_flag "Alt" "Flags" "Size" "80x") }}
+                      {{ partial "image.html" (dict "Src" .country_flag "Alt" "" "Size" "80x") }}
                       <h3>{{ .city | markdownify }}</h3>
                       <p>{{ .address_line_one | markdownify }}</p>
                       <p>{{ .address_line_two | markdownify }}</p>

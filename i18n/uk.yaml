@@ -23,7 +23,7 @@
   translation: Схожі статті
 
 - id: full_name
-  translation: Повне Ім`я
+  translation: Повне ім’я
 
 - id: email
   translation: Адреса електронної пошти
@@ -54,3 +54,21 @@
 
 - id: toggle_theme
   translation: Змінити тему
+
+- id: home
+  translation: Головна
+
+- id: page_not_found
+  translation: Сторінку не знайдено
+
+- id: back_to_home
+  translation: На головну
+
+- id: previous_page
+  translation: Попередня сторінка
+
+- id: next_page
+  translation: Наступна сторінка
+
+- id: toggle_navigation
+  translation: Відкрити меню

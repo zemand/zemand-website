@@ -2,9 +2,9 @@
   <a href="{{ .RelPermalink }}" title="{{ .Title }}">
     {{ with .Params.image }}
       {{ if fileExists (add `assets/` .) }}
-        {{ partial "image.html" (dict "Src" . "Alt" "blog-post" "Class" "card-img-top h-auto" "Size" "570x") }}
+        {{ partial "image.html" (dict "Src" . "Alt" $.Title "Class" "card-img-top h-auto" "Size" "570x") }}
       {{ else }}
-        {{ partial "image.html" (dict "Src" "https://via.placeholder.com/570x380.png/eee/eee" "Alt" "image-fallback" "Size" "570x") }}
+        {{ partial "image.html" (dict "Src" "https://via.placeholder.com/570x380.png/eee/eee" "Alt" "" "Size" "570x") }}
       {{ end }}
     {{ end }}
   </a>
@@ -24,7 +24,7 @@
     <p>{{ .Plain | truncate 120 }}</p>
   </div>
 
-  {{ $publishDate := .PublishDate.Format "Jan 02, 2006" }}
+  {{ $publishDate := .PublishDate | time.Format ":date_medium" }}
   {{ $authorPath := printf "/author/%s" (.Params.Author | urlize | lower) }}
   {{ with site.GetPage $authorPath }}
     <div class="card-footer bg-transparent border-top-0">
@@ -33,7 +33,7 @@
           <div class="user-image me-3">
             <a href="{{ .RelPermalink }}" title="{{ .Title }}">
               {{ if .Params.image }}
-                {{ partial "image.html" (dict "Src" .Params.image "Alt" "avatar" "Class" "rounded-circle" "Size" "70x70") }}
+                {{ partial "image.html" (dict "Src" .Params.image "Alt" .Title "Class" "rounded-circle" "Size" "70x70") }}
               {{ end }}
             </a>
           </div>

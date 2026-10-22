@@ -43,7 +43,7 @@
           <ul class="pagination justify-content-center">
             {{ if $paginator.HasPrev }}
             <li class="page-item">
-              <a class="page-link arrow" href="{{ $paginator.Prev.URL }}" aria-label="Previous">
+              <a class="page-link arrow" href="{{ $paginator.Prev.URL }}" aria-label="{{ T `previous_page` }}">
                 <i class="las la-angle-left"></i>
               </a>
             </li>
@@ -59,7 +59,7 @@
 
             {{ if $paginator.HasNext }}
             <li class="page-item">
-              <a class="page-link arrow" href="{{ $paginator.Next.URL }}" aria-label="Next">
+              <a class="page-link arrow" href="{{ $paginator.Next.URL }}" aria-label="{{ T `next_page` }}">
                 <i class="las la-angle-right"></i>
               </a>
             </li>
