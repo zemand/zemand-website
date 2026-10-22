@@ -1,7 +1,9 @@
 {{/* Row of technologies or standards: icon + name, colored on hover.
      Context: dict "data" (an entry of data/technologies.yaml) */}}
 {{ with .data }}
-  {{ $title := cond (eq .kind "standards") (T "standards_i_work_with") (T "technologies_i_work_with") }}
+  {{ $title := T "technologies_i_work_with" }}
+  {{ if eq .kind "standards" }}{{ $title = T "standards_i_work_with" }}{{ end }}
+  {{ if eq .kind "mixed" }}{{ $title = T "technologies_and_standards_i_work_with" }}{{ end }}
   <div class="tech-strip" data-aos="fade-up">
     <p class="tech-strip-title text-uppercase">{{ $title }}</p>
     <ul class="tech-list">

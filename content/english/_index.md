@@ -9,7 +9,7 @@ banner:
 
 # brands: technologies row, items in data/technologies.yaml (brand_images would show the old carousel)
 brands_carousel:
-  enable: true
+  enable: false
 
 # features
 features:
