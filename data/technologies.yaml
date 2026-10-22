@@ -1,0 +1,50 @@
+# Technologies (or standards) shown as a row of icon + name.
+# Keys: "home" for the Home page, category slugs for category pages.
+# Item: name, and either icon (SVG under assets/) or la (Line Awesome class);
+# color (hex without #) is used on hover; omit it for black logos.
+# kind: standards switches the heading to "Standards I work with".
+
+home:
+  items:
+    - { name: "Python", icon: "images/tech/python.svg", color: "3776AB" }
+    - { name: "OpenCV", icon: "images/tech/opencv.svg", color: "5C3EE8" }
+    - { name: "PyTorch", icon: "images/tech/pytorch.svg", color: "EE4C2C" }
+    - { name: "Schneider Electric", icon: "images/tech/schneiderelectric.svg", color: "3DCD58" }
+    - { name: "Rockwell Automation", icon: "images/tech/rockwellautomation.svg", color: "CD163F" }
+
+artificial-intelligence:
+  items:
+    - { name: "Claude", icon: "images/tech/claude.svg", color: "D97757" }
+    - { name: "Gemini", icon: "images/tech/googlegemini.svg", color: "8E75B2" }
+    - { name: "Ollama", icon: "images/tech/ollama.svg" }
+
+computer-vision:
+  items:
+    - { name: "Python", icon: "images/tech/python.svg", color: "3776AB" }
+    - { name: "OpenCV", icon: "images/tech/opencv.svg", color: "5C3EE8" }
+    - { name: "PyTorch", icon: "images/tech/pytorch.svg", color: "EE4C2C" }
+    # TODO: suggestion, confirm (GPUs / Jetson for vision inference)
+    - { name: "NVIDIA", icon: "images/tech/nvidia.svg", color: "76B900" }
+
+industrial-automation:
+  items:
+    - { name: "Schneider Electric", icon: "images/tech/schneiderelectric.svg", color: "3DCD58" }
+    - { name: "Rockwell Automation", icon: "images/tech/rockwellautomation.svg", color: "CD163F" }
+
+robotics:
+  items:
+    - { name: "Schneider Electric", icon: "images/tech/schneiderelectric.svg", color: "3DCD58" }
+    - { name: "ABB", icon: "images/tech/abbrobotstudio.svg", color: "FF9E0F" }
+
+cybersecurity:
+  kind: standards
+  items:
+    - { name: "NIST CSF", la: "las la-shield-alt" }
+    # TODO: suggestion, confirm (security standard for industrial automation systems)
+    - { name: "IEC 62443", la: "las la-user-shield" }
+
+energy-management:
+  items:
+    # TODO: suggestions, confirm
+    - { name: "Schneider Electric", icon: "images/tech/schneiderelectric.svg", color: "3DCD58" }
+    - { name: "Modbus", la: "las la-network-wired" }

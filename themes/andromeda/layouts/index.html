@@ -143,23 +143,10 @@
   {{ end }}
 
   {{ with .Params.brands_carousel }}
-    {{ if and .enable .technologies }}
-      {{/* static row of technologies: icon + name, colored on hover */}}
+    {{ if and .enable hugo.Data.technologies.home }}
       <section class="overflow-hidden">
         <div class="container">
-          <div class="tech-strip" data-aos="fade-up">
-            {{ with .title }}
-              <p class="tech-strip-title text-uppercase">{{ . | markdownify }}</p>
-            {{ end }}
-            <ul class="tech-list">
-              {{ range .technologies }}
-                <li class="tech-item" style="--tech-color: #{{ .color }}">
-                  {{ with resources.Get .icon }}{{ .Content | safeHTML }}{{ end }}
-                  <span>{{ .name }}</span>
-                </li>
-              {{ end }}
-            </ul>
-          </div>
+          {{ partial "components/tech-strip.html" (dict "data" hugo.Data.technologies.home) }}
         </div>
       </section>
     {{ else if .enable }}

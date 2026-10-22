@@ -75,3 +75,9 @@
 
 - id: contacts
   translation: Контакти
+
+- id: technologies_i_work_with
+  translation: Технології, з якими я працюю
+
+- id: standards_i_work_with
+  translation: Стандарти, з якими я працюю

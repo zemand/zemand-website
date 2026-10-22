@@ -7,26 +7,9 @@ banner:
   # TODO: replace the demo illustration with your own image
   image: "images/banner-app.png"
 
-# brands: technologies I work with (static row; brand_images would show the old carousel)
+# brands: technologies row, items in data/technologies.yaml (brand_images would show the old carousel)
 brands_carousel:
   enable: true
-  title: "Технології, з якими я працюю"
-  technologies:
-    - name: "Python"
-      icon: "images/tech/python.svg"
-      color: "3776AB"
-    - name: "OpenCV"
-      icon: "images/tech/opencv.svg"
-      color: "5C3EE8"
-    - name: "PyTorch"
-      icon: "images/tech/pytorch.svg"
-      color: "EE4C2C"
-    - name: "Schneider Electric"
-      icon: "images/tech/schneiderelectric.svg"
-      color: "3DCD58"
-    - name: "Rockwell Automation"
-      icon: "images/tech/rockwellautomation.svg"
-      color: "CD163F"
 
 # features
 features:
@@ -47,12 +30,12 @@ features:
     - icon: "las la-robot"
       title: "[Робототехніка](categories/robotics/)"
       content: "Промислові роботи і те, як вони працюють поруч із людьми."
-    - icon: "las la-bolt"
-      title: "[Енергоменеджмент](categories/energy-management/)"
-      content: "Енергоефективність, мікромережі й енергетика в промисловості."
     - icon: "las la-shield-alt"
       title: "[Кібербезпека](categories/cybersecurity/)"
       content: "Захист промислових систем і мереж."
+    - icon: "las la-bolt"
+      title: "[Енергоменеджмент](categories/energy-management/)"
+      content: "Енергоефективність, мікромережі й енергетика в промисловості."
 
 # intro_video
 intro_video:

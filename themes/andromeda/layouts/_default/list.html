@@ -26,6 +26,9 @@
         </div>
       </div>
     </div>
+    {{ with index hugo.Data.technologies .File.ContentBaseName }}
+      {{ partial "components/tech-strip.html" (dict "data" .) }}
+    {{ end }}
   </div>
 </section>
 {{ end }}

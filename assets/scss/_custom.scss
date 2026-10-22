@@ -375,8 +375,13 @@ html[data-theme="dark"] .footer-brand-name {
     fill: currentColor;
   }
 
+  i {
+    font-size: 2rem;
+    line-height: 1;
+  }
+
   &:hover {
-    color: var(--tech-color);
+    color: var(--tech-color, #222222);
   }
 }
 
@@ -389,7 +394,12 @@ html[data-theme="dark"] {
     color: var(--dark-text-soft);
 
     &:hover {
-      color: var(--tech-color);
+      color: var(--tech-color, var(--dark-heading));
     }
   }
+}
+
+// Mobile menu button (its SVG strokes use currentColor)
+html[data-theme="dark"] .navbar-toggler {
+  color: var(--dark-heading) !important;
 }

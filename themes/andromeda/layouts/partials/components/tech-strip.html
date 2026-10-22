@@ -1,0 +1,20 @@
+{{/* Row of technologies or standards: icon + name, colored on hover.
+     Context: dict "data" (an entry of data/technologies.yaml) */}}
+{{ with .data }}
+  {{ $title := cond (eq .kind "standards") (T "standards_i_work_with") (T "technologies_i_work_with") }}
+  <div class="tech-strip" data-aos="fade-up">
+    <p class="tech-strip-title text-uppercase">{{ $title }}</p>
+    <ul class="tech-list">
+      {{ range .items }}
+        <li class="tech-item"{{ with .color }} style="--tech-color: #{{ . }}"{{ end }}>
+          {{ with .icon }}
+            {{ with resources.Get . }}{{ .Content | safeHTML }}{{ end }}
+          {{ else }}
+            <i class="{{ .la }}" aria-hidden="true"></i>
+          {{ end }}
+          <span>{{ .name }}</span>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+{{ end }}

@@ -75,3 +75,9 @@
 
 - id: contacts
   translation: Contacts
+
+- id: technologies_i_work_with
+  translation: Technologies I work with
+
+- id: standards_i_work_with
+  translation: Standards I work with
