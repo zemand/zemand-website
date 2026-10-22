@@ -4,8 +4,7 @@ banner:
   title: "Розумна автоматизація простими словами"
   button: "Читати блог"
   button_link: "blog/"
-  # TODO: replace the demo illustration with your own image
-  image: "images/banner-app.png"
+  show_logo: true
 
 # brands: technologies row, items in data/technologies.yaml (brand_images would show the old carousel)
 brands_carousel:

@@ -2,10 +2,12 @@
 # favicon module: https://github.com/gethugothemes/hugo-modules/tree/master/images#favicon-implementation
 favicon = "images/favicon.png"
 # logo module: https://github.com/gethugothemes/hugo-modules/tree/master/images#logo-implementation
-logo = "images/favicon.png"
+logo = "images/logo/zemand-logo-light.svg"
+# shown instead of logo in the dark theme
+logo_darkmode = "images/logo/zemand-logo-dark.svg"
 # use `px` or `x` with logo_width, example: "100px".
 # Note: logo_width is not work with .svg file
-logo_width = "48px"
+logo_width = "170px"
 # if logo_webp set false, it will not generate WEBP version of logo | default is true
 logo_webp = true
 # logo text will only show when logo is missing.

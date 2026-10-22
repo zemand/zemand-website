@@ -60,7 +60,6 @@
             class="navbar-brand footer-brand d-inline-flex align-items-center mb-4"
             href="{{ site.BaseURL | relLangURL }}">
             {{ partial "logo.html" }}
-            <span class="footer-brand-name ms-3">{{ site.Title }}</span>
           </a>
           {{ with site.Params.footer_info }}
             <p class="mb-0">{{ . | markdownify }}</p>

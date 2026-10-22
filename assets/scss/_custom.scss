@@ -1,7 +1,10 @@
-// Contrast (WCAG AA). $color-primary (#FE6019) is only 3:1 against white,
-// so white text on it and primary text on white use a darker shade (4.7:1).
-$color-primary-strong: #c94a0f;
-$text-color: #666666; // theme default #888 is 3.5:1 on white
+// Brand palette from the logo: orange $color-primary (#FF7A2B, hugo.toml),
+// navy #0F2A47, slate #5B6B7F.
+// Contrast (WCAG AA): white on #FF7A2B is only 2.6:1, so white text on orange
+// and orange text on white use a darker shade (4.7:1).
+$color-primary-strong: #c2500f;
+$brand-navy: #0f2a47;
+$text-color: #5b6b7f; // 5.5:1 on white
 
 body,
 a,
@@ -15,6 +18,83 @@ a,
 .pagination .page-link:focus,
 .badge.bg-primary {
   background-color: $color-primary-strong !important;
+}
+
+// Light theme: navy headings and navigation, as in the logo
+html:not([data-theme="dark"]) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .title,
+  .card-title a {
+    color: $brand-navy;
+  }
+
+  .nav-item .nav-link:not(:hover) {
+    color: $brand-navy !important;
+  }
+
+  .nav-item.active .nav-link {
+    color: $color-primary-strong !important;
+  }
+
+  // icons and highlighted words in orange: the logo orange is 2.6:1 on white
+  .icon.text-primary,
+  span.text-primary {
+    color: $color-primary-strong !important;
+  }
+}
+
+// play button: white icon on the darker orange (both themes)
+.video-play-btn {
+  background-color: $color-primary-strong !important;
+}
+
+// Logo: light version in the light theme, dark version in the dark theme
+.img-dark {
+  display: none !important;
+}
+
+html[data-theme="dark"] {
+  .img-light {
+    display: none !important;
+  }
+
+  .img-dark {
+    display: inline-block !important;
+  }
+}
+
+.navbar-brand img {
+  height: auto;
+}
+
+// Home banner: big logo next to the title; the tinted box covers the whole
+// block (the theme sized it for an illustration below the text)
+.banner-with-logo {
+  .block {
+    padding-bottom: 5rem;
+  }
+
+  .has-circle {
+    height: 100%;
+  }
+}
+
+.banner-logo img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+}
+
+// Footer: wide logo
+.footer-brand img {
+  width: 240px;
+  max-width: 100%;
+  height: auto;
 }
 
 // Links: lower specificity in dark mode so component colors (.btn etc.) still win
@@ -49,20 +129,21 @@ html:not([data-theme="dark"]) {
 // before styles load, so there is no flash of the light theme.
 
 html[data-theme="dark"] {
-  --dark-bg: #121212;
-  --dark-bg-elevated: #161616;
-  --dark-bg-input: #1a1a1a;
-  --dark-bg-footer: #0c0c0c;
-  --dark-text: #d1d1d1;
-  --dark-text-soft: #cccccc;
-  --dark-text-light: #eeeeee;
+  // navy from the logo
+  --dark-bg: #0b1f35;
+  --dark-bg-elevated: #{$brand-navy};
+  --dark-bg-input: #132f4f;
+  --dark-bg-footer: #081829;
+  --dark-text: #d8e1eb;
+  --dark-text-soft: #c3cedb;
+  --dark-text-light: #e8eef4;
   --dark-heading: #ffffff;
-  --dark-muted: #aaaaaa;
-  --dark-footer-text: #999999;
-  --dark-placeholder: #777777;
-  --dark-border: #2a2a2a;
-  --dark-border-strong: #333333;
-  --dark-border-footer: #222222;
+  --dark-muted: #a7b4c4;
+  --dark-footer-text: #8fa0b4;
+  --dark-placeholder: #7d8da1;
+  --dark-border: #1e3a5c;
+  --dark-border-strong: #26476b;
+  --dark-border-footer: #16304d;
   --dark-accent: #{$color-primary};
 }
 
@@ -301,7 +382,7 @@ body {
 
   i {
     font-size: 1.4rem;
-    color: #444444;
+    color: $brand-navy;
     transition: color 0.3s;
   }
 
@@ -322,18 +403,6 @@ html[data-theme="dark"] .nav-theme-btn {
   .theme-icon-dark {
     display: inline-block;
   }
-}
-
-// Footer: site name next to the logo
-.footer-brand-name {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: $black;
-  white-space: nowrap;
-}
-
-html[data-theme="dark"] .footer-brand-name {
-  color: var(--dark-heading);
 }
 
 // Home: technologies row (replaces the demo brand carousel)
@@ -366,7 +435,7 @@ html[data-theme="dark"] .footer-brand-name {
   align-items: center;
   gap: 0.625rem;
   font-weight: 600;
-  color: #666666;
+  color: $text-color;
   transition: color 0.3s ease;
 
   svg {
@@ -381,7 +450,7 @@ html[data-theme="dark"] .footer-brand-name {
   }
 
   &:hover {
-    color: var(--tech-color, #222222);
+    color: var(--tech-color, #{$brand-navy});
   }
 }
 
@@ -402,4 +471,9 @@ html[data-theme="dark"] {
 // Mobile menu button (its SVG strokes use currentColor)
 html[data-theme="dark"] .navbar-toggler {
   color: var(--dark-heading) !important;
+}
+
+// Dark theme: tinted boxes behind the banner and page headers in logo navy
+html[data-theme="dark"] .has-circle {
+  background-color: var(--dark-bg-elevated) !important;
 }

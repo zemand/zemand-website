@@ -59,14 +59,20 @@
 
 
   {{ with .Params.banner }}
-    <section class="banner">
+    <section class="banner{{ if .show_logo }} banner-with-logo{{ end }}">
       <div class="container-xxl position-relative">
         <div class="row text-center">
           <div class="col-12">
             <div
-              class="block row justify-content-center no-gutters"
+              class="block row justify-content-center align-items-center no-gutters"
               data-aos="fade-up">
-              <div class="col-lg-10 px-0 px-xl-4" data-rellax-speed="-3">
+              {{ if .show_logo }}
+                {{/* site logo (light/dark) next to the title */}}
+                <div class="col-lg-5 banner-logo mb-4 mb-lg-0" data-aos="fade-up">
+                  {{ partial "logo.html" }}
+                </div>
+              {{ end }}
+              <div class="{{ if .show_logo }}col-lg-6 text-lg-start ps-lg-5{{ else }}col-lg-10{{ end }} px-0 px-xl-4" data-rellax-speed="-3">
                 <h1 class="mb-5" data-aos="fade-up">
                   {{ .title | markdownify }}
                 </h1>
