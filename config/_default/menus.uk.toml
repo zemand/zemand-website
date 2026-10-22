@@ -61,3 +61,19 @@ weight = 4
 name = "Контакти"
 url = "/contact/"
 weight = 5
+
+# footer menu (Quick links)
+[[footer]]
+name = "Про мене"
+url = "/about/"
+weight = 1
+
+[[footer]]
+name = "Блог"
+url = "/blog/"
+weight = 2
+
+[[footer]]
+name = "Контакти"
+url = "/contact/"
+weight = 3
