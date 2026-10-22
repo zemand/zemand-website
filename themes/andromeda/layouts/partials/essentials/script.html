@@ -2,12 +2,12 @@
 {{ $bootstrap := resources.Get "js/bootstrap.js" }}
 {{ $params := dict }}
 {{ $sourceMap := cond hugo.IsProduction "" "inline" }}
-{{ $opts := dict "sourceMap" $sourceMap "target" "es2018" "params" $params }}
+{{ $opts := dict "sourceMap" $sourceMap "target" "es2018" "params" $params "minify" hugo.IsProduction }}
 {{ $bootstrap = $bootstrap | js.Build $opts }}
 {{ if hugo.IsProduction }}
   {{ $bootstrap = $bootstrap | fingerprint "sha512" }}
 {{ end }}
-<script crossorigin="anonymous" defer {{ if hugo.IsProduction }}integrity="{{ $bootstrap.Data.Integrity }}"{{end}} type="application/javascript">{{$bootstrap.Content | safeJS}}</script>
+<script src="{{ $bootstrap.RelPermalink }}" crossorigin="anonymous" {{ if hugo.IsProduction }}integrity="{{ $bootstrap.Data.Integrity }}"{{ end }}></script>
 
 <!-- JS Plugins + Main script -->
 {{ $scripts := slice }}
@@ -26,7 +26,8 @@
 <!-- main script -->
 {{ $scripts = $scripts | append (resources.Get "js/script.js" | minify) }}
 {{ $scripts = $scripts | resources.Concat "js/script.js" | minify | fingerprint "sha512" }}
-<script crossorigin="anonymous" defer="defer" integrity="{{ $scripts.Data.Integrity }}" type="application/javascript">{{$scripts.Content | safeJS}}</script>
+<!-- loaded synchronously: inline module scripts below (WebFont, cookie consent) use it right away -->
+<script src="{{ $scripts.RelPermalink }}" crossorigin="anonymous" integrity="{{ $scripts.Data.Integrity }}"></script>
 
 <!-- font family -->
 {{ $pf:= site.Params.variables.font_primary }}

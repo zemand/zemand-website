@@ -35,7 +35,7 @@
   {{ end }}
 {{ end }}
 {{ $styles := $styles | append (resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "style.scss" . | toCSS) }}
-{{ $styles := $styles | resources.Concat "/css/style.css" | fingerprint "sha512" }}
+{{ $styles := $styles | resources.Concat "/css/style.css" | minify | fingerprint "sha512" }}
 
 
 <!-- Purge CSS in Production -->
@@ -45,5 +45,4 @@
 {{ end }}
 
 
-<!-- <link rel="stylesheet" href="{{ $styles.RelPermalink }}" /> -->
-<style type="text/css">{{$styles.Content | safeCSS}}</style>
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" />

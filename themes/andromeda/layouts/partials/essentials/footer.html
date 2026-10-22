@@ -79,7 +79,7 @@
           {{ end }}
 
           <ul class="social-links list-inline">
-            {{ range site.Data.social.main }}
+            {{ range hugo.Data.social.main }}
               <li class="list-inline-item">
                 <a
                   target="_blank"
@@ -137,45 +137,42 @@
 </div>
 
 <script>
-  // 1. Чекаємо завантаження сторінки
-  window.addEventListener('load', function() {
-    const btn = document.getElementById('theme-toggle');
-    const icon = document.getElementById('theme-icon');
-    const html = document.documentElement;
+  // Theme toggle. The initial theme is applied in essentials/head.html.
+  (function () {
+    var btn = document.getElementById('theme-toggle');
+    var html = document.documentElement;
+    if (!btn) return;
 
-    // 2. Перевіряємо, чи ми бачимо кнопку
-    if (!btn) {
-      console.log("Помилка: Кнопку 'theme-toggle' не знайдено на сторінці!");
-      return;
+    function apply(theme) {
+      html.setAttribute('data-theme', theme);
+      btn.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
     }
 
-    // 3. Функція оновлення іконки
-    function setIcon(theme) {
-      if (theme === 'dark') {
-        icon.classList.remove('la-moon');
-        icon.classList.add('la-sun');
-        icon.style.color = '#FE6019'; // Помаранчеве сонце
-      } else {
-        icon.classList.remove('la-sun');
-        icon.classList.add('la-moon');
-        icon.style.color = '#444444'; // Темний місяць
+    function saved() {
+      try {
+        return localStorage.getItem('theme');
+      } catch (e) {
+        return null;
       }
     }
 
-    // 4. Встановлюємо тему при старті
-    const currentTheme = localStorage.getItem('theme') || 'light';
-    html.setAttribute('data-theme', currentTheme);
-    setIcon(currentTheme);
+    apply(html.getAttribute('data-theme') === 'dark' ? 'dark' : 'light');
 
-    // 5. Логіка кліку
-    btn.onclick = function() {
-      const isDark = html.getAttribute('data-theme') === 'dark';
-      const nextTheme = isDark ? 'light' : 'dark';
-      
-      html.setAttribute('data-theme', nextTheme);
-      localStorage.setItem('theme', nextTheme);
-      setIcon(nextTheme);
-      console.log("Тему змінено на: " + nextTheme);
-    };
-  });
+    btn.addEventListener('click', function () {
+      var next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      apply(next);
+      try {
+        localStorage.setItem('theme', next);
+      } catch (e) {}
+    });
+
+    // Follow the system theme until the visitor picks one explicitly
+    if (window.matchMedia) {
+      var media = window.matchMedia('(prefers-color-scheme: dark)');
+      var onChange = function (e) {
+        if (!saved()) apply(e.matches ? 'dark' : 'light');
+      };
+      if (media.addEventListener) media.addEventListener('change', onChange);
+    }
+  })();
 </script>

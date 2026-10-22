@@ -1,0 +1,226 @@
+// Dark theme: html[data-theme="dark"] is set in partials/essentials/head.html
+// before styles load, so there is no flash of the light theme.
+
+html[data-theme="dark"] {
+  --dark-bg: #121212;
+  --dark-bg-elevated: #161616;
+  --dark-bg-input: #1a1a1a;
+  --dark-bg-footer: #0c0c0c;
+  --dark-text: #d1d1d1;
+  --dark-text-soft: #cccccc;
+  --dark-text-light: #eeeeee;
+  --dark-heading: #ffffff;
+  --dark-muted: #aaaaaa;
+  --dark-footer-text: #999999;
+  --dark-placeholder: #777777;
+  --dark-border: #2a2a2a;
+  --dark-border-strong: #333333;
+  --dark-border-footer: #222222;
+  --dark-accent: #{$color-primary};
+}
+
+// Global background and text
+html[data-theme="dark"],
+html[data-theme="dark"] body {
+  background-color: var(--dark-bg) !important;
+  color: var(--dark-text) !important;
+}
+
+// Navigation and page header
+html[data-theme="dark"] .header-nav,
+html[data-theme="dark"] .navbar,
+html[data-theme="dark"] .header-height-fix,
+html[data-theme="dark"] .page-header,
+html[data-theme="dark"] .nav-bg-dot,
+html[data-theme="dark"] section {
+  background-color: var(--dark-bg) !important;
+  background-image: none !important;
+  border-bottom-color: var(--dark-border) !important;
+}
+
+// Headings
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] .title,
+html[data-theme="dark"] .nav-link,
+html[data-theme="dark"] .navbar-brand {
+  color: var(--dark-heading) !important;
+  font-weight: 600 !important;
+}
+
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2 {
+  font-weight: 600 !important;
+}
+
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] .text-dark,
+html[data-theme="dark"] .text-black,
+html[data-theme="dark"] .text-color,
+html[data-theme="dark"] .content h1,
+html[data-theme="dark"] .content h2,
+html[data-theme="dark"] .section h1,
+html[data-theme="dark"] .section h2 {
+  color: var(--dark-heading) !important;
+  -webkit-text-fill-color: var(--dark-heading) !important;
+}
+
+// Post card titles
+html[data-theme="dark"] .post-title a,
+html[data-theme="dark"] .card-title a {
+  color: var(--dark-heading) !important;
+}
+
+html[data-theme="dark"] .post-title a:hover {
+  color: var(--dark-accent) !important;
+}
+
+// Article content
+html[data-theme="dark"] .content,
+html[data-theme="dark"] .post-content {
+  color: var(--dark-text) !important;
+}
+
+html[data-theme="dark"] .content strong {
+  color: var(--dark-heading) !important;
+}
+
+html[data-theme="dark"] .content a:not(.btn) {
+  color: var(--dark-accent) !important;
+  text-decoration: underline;
+}
+
+html[data-theme="dark"] code,
+html[data-theme="dark"] pre {
+  background-color: var(--dark-bg-input) !important;
+  color: var(--dark-accent) !important;
+  border: 1px solid var(--dark-border-strong) !important;
+}
+
+html[data-theme="dark"] blockquote,
+html[data-theme="dark"] blockquote p,
+html[data-theme="dark"] blockquote cite,
+html[data-theme="dark"] blockquote span {
+  color: var(--dark-heading) !important;
+}
+
+html[data-theme="dark"] blockquote {
+  border-color: var(--dark-accent) !important;
+}
+
+// Cards
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .post-item {
+  background-color: var(--dark-bg-elevated) !important;
+  border: 1px solid var(--dark-border) !important;
+}
+
+html[data-theme="dark"] .card-body p,
+html[data-theme="dark"] .card p,
+html[data-theme="dark"] .post-item .content p,
+html[data-theme="dark"] article p {
+  color: var(--dark-text-soft) !important;
+}
+
+// Meta: dates, authors, card captions
+html[data-theme="dark"] .post-meta,
+html[data-theme="dark"] .post-meta *,
+html[data-theme="dark"] .card-meta,
+html[data-theme="dark"] .card-text,
+html[data-theme="dark"] .post-item p,
+html[data-theme="dark"] .card-body .text-muted,
+html[data-theme="dark"] .card-body .text-light,
+html[data-theme="dark"] .card-body .text-dark,
+html[data-theme="dark"] .card-body small,
+html[data-theme="dark"] .card-body time,
+html[data-theme="dark"] .post-author span,
+html[data-theme="dark"] .post-author small {
+  color: var(--dark-muted) !important;
+}
+
+// Breadcrumbs
+html[data-theme="dark"] .breadcrumb-item,
+html[data-theme="dark"] .breadcrumb-item a,
+html[data-theme="dark"] .breadcrumb-item.active {
+  color: var(--dark-text-light) !important;
+}
+
+// Forms
+html[data-theme="dark"] form label,
+html[data-theme="dark"] .contact-form label {
+  color: var(--dark-text-light) !important;
+}
+
+html[data-theme="dark"] .form-control {
+  background-color: var(--dark-bg-input) !important;
+  color: var(--dark-heading) !important;
+  border: 1px solid var(--dark-border-strong) !important;
+
+  &:focus {
+    border-color: var(--dark-accent) !important;
+    background-color: var(--dark-bg-elevated) !important;
+    color: var(--dark-heading) !important;
+    box-shadow: 0 0 0 0.2rem rgba($color-primary, 0.25) !important;
+  }
+
+  &::placeholder {
+    color: var(--dark-placeholder) !important;
+  }
+}
+
+// Footer
+html[data-theme="dark"] footer,
+html[data-theme="dark"] .footer {
+  background-color: var(--dark-bg-footer) !important;
+  border-top: 1px solid var(--dark-border-footer) !important;
+}
+
+html[data-theme="dark"] footer h4,
+html[data-theme="dark"] footer h5,
+html[data-theme="dark"] .footer-title {
+  color: var(--dark-heading) !important;
+}
+
+html[data-theme="dark"] footer p,
+html[data-theme="dark"] footer li a,
+html[data-theme="dark"] .copyright-text {
+  color: var(--dark-footer-text) !important;
+}
+
+html[data-theme="dark"] footer li a:hover {
+  color: var(--dark-accent) !important;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease !important;
+}
+
+// Theme toggle: the icon follows data-theme, no JS needed
+.nav-theme-btn {
+  cursor: pointer;
+
+  i {
+    font-size: 1.4rem;
+    color: #444444;
+    transition: color 0.3s;
+  }
+
+  .theme-icon-dark {
+    display: none;
+  }
+}
+
+html[data-theme="dark"] .nav-theme-btn {
+  i {
+    color: var(--dark-accent);
+  }
+
+  .theme-icon-light {
+    display: none;
+  }
+
+  .theme-icon-dark {
+    display: inline-block;
+  }
+}

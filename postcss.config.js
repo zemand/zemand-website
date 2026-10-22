@@ -9,8 +9,6 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
     /^swiper-/,
     /collapsing/,
     /show/,
-    /[aria-expanded=true]/,
-    /[aria-expanded=false]/,
     /^lb-/,
     /^gl/,
     /^go/,
@@ -25,6 +23,27 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
     /visible/,
     /current/,
     /active/,
+    // classes added at runtime by script.js, Bootstrap, AOS and modules
+    /^header-/,
+    /^preloader/,
+    /^cookie-box/,
+    /^aos-/,
+    /^was-validated/,
+    /^fade/,
+    /^dropdown/,
+    /^modal/,
+  ],
+  // attributes hugo_stats.json does not record or that are set at runtime
+  // (theme toggle, Bootstrap dropdowns, AOS animations)
+  dynamicAttributes: [
+    "data-theme",
+    "data-bs-popper",
+    "aria-expanded",
+    "aria-pressed",
+    "data-aos",
+    "data-aos-delay",
+    "data-aos-duration",
+    "data-aos-easing",
   ],
 });
 

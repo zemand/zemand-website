@@ -19,5 +19,10 @@
   "homepage": "https://github.com/zemand/zemand-website#readme",
   "dependencies": {
     "@popperjs/core": "^2.11.8"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "postcss": "^8.5.31",
+    "postcss-cli": "^11.0.1"
   }
 }

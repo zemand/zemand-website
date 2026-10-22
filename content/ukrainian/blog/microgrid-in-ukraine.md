@@ -4,6 +4,7 @@ title: "Мікромережі в Україні"
 categories: ["Energy Management"]
 image: "images/blog/02.jpg"
 author: "andrii-zemlianyi"
+translationKey: "microgrid-ukraine"
 draft: false
 ---
 

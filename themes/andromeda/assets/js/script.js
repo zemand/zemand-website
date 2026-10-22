@@ -22,9 +22,12 @@ window.onscroll = () => {
 
 window.onload = () => {
   // Preloader init
-  setTimeout(() => {
-    document.querySelector(".preloader").classList.add("preloader-hide");
-  }, 150);
+  var preloader = document.querySelector(".preloader");
+  if (preloader) {
+    setTimeout(() => {
+      preloader.classList.add("preloader-hide");
+    }, 150);
+  }
 
   // AOS init
   setTimeout(() => {

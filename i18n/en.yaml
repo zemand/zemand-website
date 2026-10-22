@@ -51,3 +51,6 @@
 
 - id: min_read
   translation: Min read
+
+- id: toggle_theme
+  translation: Toggle light/dark theme

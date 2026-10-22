@@ -4,6 +4,7 @@ title: "Microgrin in Ukraine"
 categories: ["Energy Management"] # Тепер стаття належить до категорії Microgrid
 image: "images/blog/02.jpg"
 author: "andrii-zemlianyi"
+translationKey: "microgrid-ukraine"
 draft: false
 ---
 

@@ -4,6 +4,7 @@ title: "Стандарти IEC для Мікромереж"
 categories: ["Energy Management"]
 image: "images/blog/02.jpg"
 author: "andrii-zemlianyi"
+translationKey: "microgrid-iec"
 draft: false
 ---
 

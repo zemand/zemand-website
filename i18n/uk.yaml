@@ -51,3 +51,6 @@
 
 - id: min_read
   translation: Час читання
+
+- id: toggle_theme
+  translation: Змінити тему

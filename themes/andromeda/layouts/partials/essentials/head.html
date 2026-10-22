@@ -1,4 +1,18 @@
 <meta charset="utf-8" />
+
+<!-- theme: set before styles load to avoid a flash of the wrong theme -->
+<script>
+  (function () {
+    var theme = null;
+    try {
+      theme = localStorage.getItem('theme');
+    } catch (e) {}
+    if (theme !== 'dark' && theme !== 'light') {
+      theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+</script>
 <title>{{ .Title | default site.Title }}</title>
 
 <!-- responsive meta -->

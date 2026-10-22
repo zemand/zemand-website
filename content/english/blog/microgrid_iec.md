@@ -4,6 +4,7 @@ title: "IEC standarts for Microgrid"
 categories: ["Energy Management"] # Тепер стаття належить до категорії Microgrid
 image: "images/blog/02.jpg"
 author: "andrii-zemlianyi"
+translationKey: "microgrid-iec"
 draft: false
 ---
 

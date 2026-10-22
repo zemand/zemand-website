@@ -2,10 +2,10 @@
 # favicon module: https://github.com/gethugothemes/hugo-modules/tree/master/images#favicon-implementation
 favicon = "images/favicon.png"
 # logo module: https://github.com/gethugothemes/hugo-modules/tree/master/images#logo-implementation
-logo = "images/logo.svg"
+logo = "images/favicon.png"
 # use `px` or `x` with logo_width, example: "100px".
 # Note: logo_width is not work with .svg file
-logo_width = "257px"
+logo_width = "48px"
 # if logo_webp set false, it will not generate WEBP version of logo | default is true
 logo_webp = true
 # logo text will only show when logo is missing.
@@ -19,6 +19,9 @@ contact_form_action = "https://formspree.io/f/xgernlzd" # contact form works wit
 
 # buy premium popup
 buy_premium_popup = false
+
+# remove unused CSS in production builds (postcss.config.js, needs `npm ci`)
+purge_css = true
 
 # custom script on header, example: custom_script= "<script>console.log(\"Hello World\")</script>" 
 custom_script= "" 
