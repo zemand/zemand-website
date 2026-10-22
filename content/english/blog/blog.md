@@ -15,11 +15,18 @@ At my previous job I discovered one more thing: I like sharing knowledge, especi
 
 ## Where Feynman comes in
 
-<!-- TODO: Feynman book image, e.g. ![Surely You're Joking, Mr. Feynman!](feynman-book.jpg) with the file next to this post -->
+{{< image src="images/blog/feynman-1959.png" alt="Richard Feynman at a blackboard with formulas, 1959" caption="Richard Feynman, 1959. Photo: Caltech yearbook “The Big T”, public domain" width="640" position="center" class="rounded-3" >}}
 
 This approach is not new. I was inspired by Richard Feynman's book "Surely You're Joking, Mr. Feynman!". Among other things, he describes students who learned physics by heart: they could recite definitions but could not apply them to real phenomena. Throughout the book he works things out for himself, from fixing radios to physics problems, instead of accepting a ready-made answer. For me it is a great illustration of the difference between memorizing and understanding.
 
 Later this principle was shaped into a popular learning technique known as the Feynman method: explain a topic in simple words, find the places where you get stuck, and go back to the source. I use it for my own learning, and this blog became its continuation.
+
+<ol class="feynman-steps">
+<li><span class="feynman-step-num">1</span><span>Explain the topic in simple words</span></li>
+<li><span class="feynman-step-num">2</span><span>Find the places where you get stuck</span></li>
+<li><span class="feynman-step-num">3</span><span>Go back to the source</span></li>
+</ol>
+<p class="feynman-steps-loop"><i class="las la-redo-alt" aria-hidden="true"></i> and back to step 1</p>
 
 ## What you will find here
 
