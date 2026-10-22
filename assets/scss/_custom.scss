@@ -660,6 +660,19 @@ html[data-theme="dark"] .post-author time {
   color: var(--dark-muted);
 }
 
+// Light theme: post cards and quotes without the white fill, just the border
+html:not([data-theme="dark"]) {
+  .blog-card,
+  .card,
+  .content blockquote {
+    background-color: transparent !important;
+  }
+
+  .content blockquote {
+    border: 1px solid $border-light;
+  }
+}
+
 // Light theme: topic and intro cards without the white fill, just the border
 html:not([data-theme="dark"]) .features-card {
   background-color: transparent !important;
