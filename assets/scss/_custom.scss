@@ -1,3 +1,50 @@
+// Contrast (WCAG AA). $color-primary (#FE6019) is only 3:1 against white,
+// so white text on it and primary text on white use a darker shade (4.7:1).
+$color-primary-strong: #c94a0f;
+$text-color: #666666; // theme default #888 is 3.5:1 on white
+
+body,
+a,
+.content a {
+  color: $text-color;
+}
+
+.btn.btn-primary,
+.pagination .page-link.active,
+.pagination .page-link:hover,
+.pagination .page-link:focus,
+.badge.bg-primary {
+  background-color: $color-primary-strong !important;
+}
+
+// Links: lower specificity in dark mode so component colors (.btn etc.) still win
+:where(html[data-theme="dark"]) a {
+  color: var(--dark-text);
+}
+
+// Primary-colored text on white (light theme only; dark theme keeps the bright accent)
+html:not([data-theme="dark"]) {
+  .btn.btn-outline-primary:not(:hover):not(:focus),
+  .pagination .page-link:not(.active):not(:hover):not(:focus),
+  .nav-item .nav-link:hover,
+  .nav-item.active .nav-link,
+  .dropdown-item:hover,
+  .dropdown-item:focus,
+  .dropdown-item.active,
+  .link-primary,
+  .contact-widget a {
+    color: $color-primary-strong !important;
+  }
+}
+
+.btn.btn-outline-primary {
+  border-color: $color-primary-strong;
+
+  &::after {
+    background-color: $color-primary-strong !important;
+  }
+}
+
 // Dark theme: html[data-theme="dark"] is set in partials/essentials/head.html
 // before styles load, so there is no flash of the light theme.
 
@@ -41,6 +88,8 @@ html[data-theme="dark"] section {
 // Headings
 html[data-theme="dark"] h3,
 html[data-theme="dark"] h4,
+html[data-theme="dark"] h5,
+html[data-theme="dark"] h6,
 html[data-theme="dark"] .title,
 html[data-theme="dark"] .nav-link,
 html[data-theme="dark"] .navbar-brand {
@@ -190,6 +239,56 @@ html[data-theme="dark"] .copyright-text {
 
 html[data-theme="dark"] footer li a:hover {
   color: var(--dark-accent) !important;
+}
+
+// Card footer: author name and publish date
+html[data-theme="dark"] .card-author .user-info span,
+html[data-theme="dark"] .card-author .user-info p {
+  color: var(--dark-muted) !important;
+}
+
+// Social icons (author page, footer)
+html[data-theme="dark"] .social-links a {
+  color: var(--dark-text) !important;
+  border-color: var(--dark-border-strong) !important;
+
+  &:hover {
+    color: var(--dark-accent) !important;
+    border-color: var(--dark-accent) !important;
+  }
+}
+
+// Dropdown menus (desktop popup and mobile list)
+html[data-theme="dark"] .dropdown-menu {
+  background-color: var(--dark-bg-elevated) !important;
+  border-color: var(--dark-border) !important;
+}
+
+html[data-theme="dark"] .dropdown-item {
+  color: var(--dark-text) !important;
+
+  &:hover,
+  &:focus,
+  &.active {
+    color: var(--dark-accent) !important;
+    background-color: rgba($color-primary, 0.1) !important;
+  }
+}
+
+// White boxes: testimonial author card, cookie banner
+html[data-theme="dark"] .testimonial-carousel .author,
+html[data-theme="dark"] .cookie-box {
+  background-color: var(--dark-bg-elevated) !important;
+  border: 1px solid var(--dark-border) !important;
+}
+
+html[data-theme="dark"] .cookie-box-button {
+  background-color: transparent !important;
+}
+
+// Pagination
+html[data-theme="dark"] .pagination .page-link:not(.active):not(:hover) {
+  background-color: var(--dark-bg-elevated) !important;
 }
 
 body {
