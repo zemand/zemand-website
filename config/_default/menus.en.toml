@@ -62,24 +62,3 @@ weight = 4
   name = "The Big Picture"
   url = "/categories/the-big-picture/"
   weight = 7
-
-[[main]]
-name = "Contact"
-url = "/contact/"
-weight = 5
-
-# footer menu (Quick links)
-[[footer]]
-name = "About"
-url = "/about/"
-weight = 1
-
-[[footer]]
-name = "Blog"
-url = "/blog/"
-weight = 2
-
-[[footer]]
-name = "Contact"
-url = "/contact/"
-weight = 3
