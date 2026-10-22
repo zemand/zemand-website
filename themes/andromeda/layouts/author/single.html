@@ -38,7 +38,7 @@
                 <span class="text-primary">{{ .Title }}</span>
               </h2>
             </div>
-            {{ range where site.RegularPages ".Params.author" (.Title | urlize | lower) }}
+            {{ range where site.RegularPages ".Params.author" .File.ContentBaseName }}
               <div class="col-md-6">
                 {{ .Render "article" }}
               </div>
