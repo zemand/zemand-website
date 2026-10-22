@@ -1,8 +1,5 @@
 ---
-title: "All about Cybersecurity"
-description: "Desc Blog..."
-image: "images/categories/microgrid-main.jpg"
+title: "Cybersecurity"
+description: "Protecting industrial systems and networks."
 layout: "list"
 ---
-
-Тут ти можеш написати великий лонгрід про Microgrid. Hugo покаже цей текст, а нижче — всі статті, які ти помітив категорією "Microgrid".

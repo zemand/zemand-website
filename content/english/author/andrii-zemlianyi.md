@@ -11,5 +11,4 @@ social:
     link: "https://github.com/zemand"
 ---
 
-Привіт! Я розробник, який нарешті переміг Hugo Andromeda. 
-Тут може бути твоя коротка професійна біографія.
+Industrial automation engineer. I work with PLCs and automated systems and write about how AI, Computer Vision and robotics are changing the factory floor, in plain language.

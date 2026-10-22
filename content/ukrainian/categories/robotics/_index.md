@@ -1,8 +1,5 @@
 ---
-title: "All about Robotics"
-description: "Desc Robotics..."
-image: "images/categories/microgrid-main.jpg"
+title: "Робототехніка"
+description: "Промислові роботи і те, як вони працюють поруч із людьми."
 layout: "list"
 ---
-
-Тут ти можеш написати великий лонгрід про Microgrid. Hugo покаже цей текст, а нижче — всі статті, які ти помітив категорією "Microgrid".

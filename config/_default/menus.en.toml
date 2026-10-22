@@ -11,64 +11,53 @@ name = "About"
 url = "/about/"
 weight = 2
 
-
 [[main]]
 name = "Blog"
 url = "/blog/"
 weight = 3
 
 [[main]]
-weight = 4
+identifier = "categories"
 name = "Categories"
-hasChildren = true
+weight = 4
 
   [[main]]
-  parent = "Categories"
+  parent = "categories"
   name = "Industrial Automation"
   url = "/categories/industrial-automation/"
   weight = 1
 
   [[main]]
-  parent = "Categories"
-  name = "AI & Computer Vision"
-  url = "/categories/ai-computer-vision"
-  weight = 2
-  
-  [[main]]
-  parent = "Categories"
+  parent = "categories"
   name = "Robotics"
-  url = "/categories/robotics"
+  url = "/categories/robotics/"
+  weight = 2
+
+  [[main]]
+  parent = "categories"
+  name = "Artificial Intelligence"
+  url = "/categories/artificial-intelligence/"
   weight = 3
 
   [[main]]
-  parent = "Categories"
-  name = "Energy Management"
-  url = "/categories/energy-management/"
+  parent = "categories"
+  name = "Computer Vision"
+  url = "/categories/computer-vision/"
   weight = 4
 
   [[main]]
-  parent = "Categories"
-  name = "Cybersecurity"
-  url = "/categories/cybersecurity/"
+  parent = "categories"
+  name = "Energy Management"
+  url = "/categories/energy-management/"
   weight = 5
 
   [[main]]
-  parent = "Categories"
-  name = "The Big Picture"
-  url = "/categories/the-big-picture/"
+  parent = "categories"
+  name = "Cybersecurity"
+  url = "/categories/cybersecurity/"
   weight = 6
-
-  [[main]]
-  parent = "Categories"
-  name = "Sandbox"
-  url = "/categories/sandbox/"
-  weight = 7
-
 
 [[main]]
 name = "Contact"
 url = "/contact/"
 weight = 5
-
-
-

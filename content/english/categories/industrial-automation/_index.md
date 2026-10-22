@@ -1,8 +1,5 @@
 ---
-title: "All about Blog"
-description: "Desc Blog..."
-image: "images/categories/microgrid-main.jpg"
+title: "Industrial Automation"
+description: "PLCs, control systems and automated production."
 layout: "list"
 ---
-
-Тут ти можеш написати великий лонгрід про Microgrid. Hugo покаже цей текст, а нижче — всі статті, які ти помітив категорією "Microgrid".

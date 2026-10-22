@@ -1,8 +1,5 @@
 ---
-title: "All about the technology Microgrid"
-description: "Desc Microgrid..."
-image: "images/categories/microgrid-main.jpg"
+title: "Енергоменеджмент"
+description: "Енергоефективність, мікромережі й енергетика в промисловості."
 layout: "list"
 ---
-
-Тут ти можеш написати великий лонгрід про Microgrid. Hugo покаже цей текст, а нижче — всі статті, які ти помітив категорією "Microgrid".

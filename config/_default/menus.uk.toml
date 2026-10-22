@@ -7,10 +7,9 @@ url = "/"
 weight = 1
 
 [[main]]
-name = "Про компанію"
+name = "Про мене"
 url = "/about/"
 weight = 2
-
 
 [[main]]
 name = "Блог"
@@ -18,57 +17,47 @@ url = "/blog/"
 weight = 3
 
 [[main]]
-weight = 4
+identifier = "categories"
 name = "Категорії"
-hasChildren = true
+weight = 4
 
   [[main]]
-  parent = "Категорії"
+  parent = "categories"
   name = "Промислова автоматизація"
   url = "/categories/industrial-automation/"
   weight = 1
 
   [[main]]
-  parent = "Категорії"
-  name = "ШІ та Комп’ютерний зір"
-  url = "/categories/ai-computer-vision"
+  parent = "categories"
+  name = "Робототехніка"
+  url = "/categories/robotics/"
   weight = 2
 
-    [[main]]
-  parent = "Категорії"
-  name = "Робототехніка"
-  url = "/categories/robotics"
+  [[main]]
+  parent = "categories"
+  name = "Штучний інтелект"
+  url = "/categories/artificial-intelligence/"
   weight = 3
 
   [[main]]
-  parent = "Категорії"
-  name = "Енергоменеджмент"
-  url = "/categories/energy-management/"
+  parent = "categories"
+  name = "Комп’ютерний зір"
+  url = "/categories/computer-vision/"
   weight = 4
 
-   [[main]]
-  parent = "Категорії"
-  name = "Кібербезпека"
-  url = "/categories/cybersecurity/"
+  [[main]]
+  parent = "categories"
+  name = "Енергоменеджмент"
+  url = "/categories/energy-management/"
   weight = 5
 
   [[main]]
-  parent = "Категорії"
-  name = "Широкий кут"
-  url = "/categories/the-big-picture/"
+  parent = "categories"
+  name = "Кібербезпека"
+  url = "/categories/cybersecurity/"
   weight = 6
-
-  [[main]]
-  parent = "Категорії"
-  name = "Пісочниця"
-  url = "/categories/sandbox/"
-  weight = 7
-
 
 [[main]]
 name = "Контакти"
 url = "/contact/"
 weight = 5
-
-
-

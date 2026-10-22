@@ -1,12 +1,14 @@
 ---
 # banner
 banner:
-  title: "Andromeda is the most intuitive way to prototype Designs"
-  button: "Get Premium Version"
-  button_link: "https://gethugothemes.com/products/andromeda/"
+  title: "Smart automation, explained simply"
+  button: "Read the blog"
+  button_link: "blog/"
+  # TODO: replace the demo illustration with your own image
   image: "images/banner-app.png"
 
 # brands
+# TODO: demo logos of other companies; replace with real partners or disable the section
 brands_carousel:
   enable: true
   brand_images:
@@ -25,91 +27,67 @@ brands_carousel:
 # features
 features:
   enable: true
-  subtitle: "Special Features"
-  title: "Elements to <br> get you started"
-  description: "Lorem ipsum dolor sit amet, consecteturre adipiscing elit. Morbi egestas <br> Werat viverra id et aliquet. vulputate egestas sollicitudin."
+  subtitle: "Topics"
+  title: "Welcome to Zemand Automation"
+  description: "A blog and knowledge platform about industrial automation, AI, Computer Vision and Robotics. Here I share what I learn along the way and try to explain it in plain language. Whether you are an engineer, a student or just curious, I hope you will find something useful."
   features_blocks:
-    - icon: "las la-lock"
-      title: "Updated Security"
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque enim id diam ornare volutpat in sagitis, aliquet. Arcu cursus"
-    - icon: "las la-magnet"
-      title: "Magnetic Turning"
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque enim id diam ornare volutpat in sagitis, aliquet. Arcu cursus"
-    - icon: "las la-tachometer-alt"
-      title: "Secured &amp; upto date"
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque enim id diam ornare volutpat in sagitis, aliquet. Arcu cursus"
-    - icon: "las la-link"
-      title: "Instant Link Shareing"
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque enim id diam ornare volutpat in sagitis, aliquet. Arcu cursus"
-    - icon: "las la-lock"
-      title: "Updated Security"
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque enim id diam ornare volutpat in sagitis, aliquet. Arcu cursus"
-    - icon: "las la-magnet"
-      title: "Magnetic Turning"
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque enim id diam ornare volutpat in sagitis, aliquet. Arcu cursus"
+    - icon: "las la-brain"
+      title: "[Artificial Intelligence](categories/artificial-intelligence/)"
+      content: "Machine learning and AI applied to industrial systems."
+    - icon: "las la-eye"
+      title: "[Computer Vision](categories/computer-vision/)"
+      content: "Teaching machines to see: cameras, image processing and inspection."
+    - icon: "las la-industry"
+      title: "[Industrial Automation](categories/industrial-automation/)"
+      content: "PLCs, control systems and automated production."
+    - icon: "las la-robot"
+      title: "[Robotics](categories/robotics/)"
+      content: "Industrial robots and how they work alongside people."
+    - icon: "las la-bolt"
+      title: "[Energy Management](categories/energy-management/)"
+      content: "Energy efficiency, microgrids and power in industry."
+    - icon: "las la-shield-alt"
+      title: "[Cybersecurity](categories/cybersecurity/)"
+      content: "Protecting industrial systems and networks."
 
 # intro_video
 intro_video:
   enable: true
-  subtitle: "Short Intro Video"
-  title: "Built exclusively for you"
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas <br> Werat viverra id et aliquet. vulputate egestas sollicitudin."
+  subtitle: "TODO"
+  title: "TODO: intro video"
+  description: "TODO: add your own video and description, or disable this section."
+  # TODO: demo video of the theme author
   video_url: "https://www.youtube.com/embed/dyZcRRWiuuw"
   video_thumbnail: "images/video-popup.jpg"
 
 
 # how_it_works
-how_it_works:   
+how_it_works:
   enable: true
   block:
-  - subtitle: "Primary Speciality"
-    title: "You Will Not miss Your All misunderstandings"
-    description: "Protect your design vision and leave nothing up to interpretation with interaction recipes. Quickly share and access all your team members interactions by using libraries, ensuring consistency throughout the."
+  - subtitle: "TODO"
+    title: "TODO: first highlight"
+    description: "TODO: add text for this block, or disable the section."
     image: "images/features-01.png"
 
-  - subtitle: "Secondary Speciality"
-    title: "Say hello to no-code The Advance Creation"
-    description: "From the simplest of interactions to those that use Excel-gradeing formulas, ProtoPie can handle them all. Make mind-blowing of New interactions everyday without ever having to write any new code."
+  - subtitle: "TODO"
+    title: "TODO: second highlight"
+    description: "TODO: add text for this block, or disable the section."
     image: "images/features-02.png"
 
 
 # testimonials
 testimonials:
   enable: true
-  subtitle: "Our Testimonial"
-  title: "Don't take our word for it"
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas <br> Werat viverra id et aliquet. vulputate egestas sollicitudin."
+  subtitle: "TODO"
+  title: "TODO: testimonials"
+  description: "TODO: add real testimonials, or disable this section."
   image_left: "images/testimonials-01.png"
   image_right: "images/testimonials-02.png"
 
   testimonials_quotes:
-    - quote: "Lorem ipsum dolor amet, conseetur adipiscing elit. Ornare quam porta arcu congue felis volutpat. Vitae lectudbfs dolor faucibus"
-      name: "David Cameron"
-      designation: "CEO, Nexuspay"
+    - quote: "TODO: testimonial text"
+      name: "TODO: name"
+      designation: "TODO: role, company"
       image: "images/user-img/05-i.jpg"
-
-    - quote: "Conseetur adipiscing elit. Ornare quam porta arcu congue felis volutpat. Vitae lectudbfs pellentesque vitae dolor faucibus"
-      name: "David Cameron"
-      designation: "CEO, Nexuspay"
-      image: "images/user-img/06-i.jpg"
-
-    - quote: "Lorem ipsum dolor amet, conseetur adipiscing elit. Ornare quam porta arcu congue felis volutpat. Vitae lectudbfs pellentesque vitae dolor"
-      name: "David Cameron"
-      designation: "CEO, Nexuspay"
-      image: "images/user-img/07-i.jpg"
-
-    - quote: "Lorem ipsum dolor amet, conseetur adipiscing elit. porta arcu congue felis volutpat. Vitae lectudbfs pellentesque vitae dolor faucibus"
-      name: "David Cameron"
-      designation: "CEO, Nexuspay"
-      image: "images/user-img/08-i.jpg"
-
-    - quote: "Lorem ipsum dolor ame conseetur. Ornare quam porta arcu congue felis volutpat. Vitae lectudbfs pellentesque vitae dolor faucibus"
-      name: "David Cameron"
-      designation: "CEO, Nexuspay"
-      image: "images/user-img/09-i.jpg"
-
-    - quote: "Lorem ipsum dolor amet, conseetur adipiscing elit. Ornare quam porta arcu congue lectudbfs pellentesque vitae dolor faucibus"
-      name: "David Cameron"
-      designation: "CEO, Nexuspay"
-      image: "images/user-img/10-i.jpg"
 ---

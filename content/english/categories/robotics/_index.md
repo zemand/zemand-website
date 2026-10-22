@@ -1,9 +1,5 @@
 ---
-title: "All about Robotics"
-slug: "ai-robotics"
-description: "Desc Blog..."
-image: "images/categories/microgrid-main.jpg"
+title: "Robotics"
+description: "Industrial robots and how they work alongside people."
 layout: "list"
 ---
-
-Тут ти можеш написати великий лонгрід про Microgrid. Hugo покаже цей текст, а нижче — всі статті, які ти помітив категорією "Microgrid".

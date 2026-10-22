@@ -1,98 +1,76 @@
 ---
-title: "Про компанію"
+title: "Про мене"
 layout: "about"
 draft: false
 
 # who_we_are
 who_we_are:
   enable: true
-  subtitle: "Who We Are"
-  title: "Hello, We're Andromeda Here for your Help"
-  description: "Your online Health & Fitness companion that offers free assistance on its Facebook Group and provides quality paid guided personal training packages by and through website. We are the first ever, online manifesto in Bangladesh to make place you will select when you think of getting fit"
+  subtitle: "Про мене"
+  title: "Привіт, я Андрій"
+  description: "Інженер з промислової автоматизації. Працюю з ПЛК та автоматизованими системами, і мене дедалі більше захоплює те, як штучний інтелект, комп’ютерний зір і робототехніка змінюють виробництво. <!-- TODO: years of experience, specialisation, location -->"
 
-  image: "images/about/01.jpg"
+  image: "images/author/andrii-zemlianyi.jpg"
 
 # what_we_do
 what_we_do:
   enable: true
-  subtitle: "Our Works"
-  title: "What We Do"
+  subtitle: "Навіщо цей блог"
+  title: "Вчуся, пояснюючи"
   block:
-    - title: "Building a new class"
-      content: "Decade of engineering under his belt, Jeremie is responsible for technical infrastructure and feature development. In Flow, wherever things just work is understanding developing complex systems"
+    - title: "Розбиратися в речах"
+      content: "Я почав цей блог, бо люблю розбиратися в речах і пояснювати їх іншим. Коли пишу, я справді розумію тему, а якщо це допоможе ще комусь, то тим краще. Тут я ділюся тим, що відкриваю для себе, простою мовою."
 
-    - title: "Design for anyone"
-      content: "Decade of engineering under his belt, Jeremie is responsible for technical infrastructure and feature development. In Flow, wherever things just work is understanding developing complex systems"
-
-    - title: "Creative flair design"
-      content: "Decade of engineering under his belt, Jeremie is responsible for technical infrastructure and feature development. In Flow, wherever things just work is understanding developing complex systems"
-
-    - title: "Building products"
-      content: "Decade of engineering under his belt, Jeremie is responsible for technical infrastructure and feature development. In Flow, wherever things just work is understanding developing complex systems"
+    - title: "Поки вчишся — живеш"
+      content: "«Будь-хто, хто перестає вчитися, старіє, неважливо, у 20 чи 80 років. Будь-хто, хто продовжує вчитися, залишається молодим». — Генрі Форд (приписують). Саме про це цей сайт."
 
 # our_mission
 our_mission:
   enable: true
-  subtitle: "OUR MISSION"
-  title: "Main Vision And Mission Of Our Company"
-  description: "We were freelance designers and developers, constantly finding ourselve deep vague feedback. leaving a notes from the sticky note piece ."
+  subtitle: "Бачення"
+  title: "Автоматизація, що бачить, адаптується і вчиться"
+  description: "Я вірю, що автоматизація майбутнього не просто виконуватиме програми: вона бачитиме, адаптуватиметься і вчитиметься. Класичне керування та ШІ працюватимуть разом, а кібербезпека й енергоефективність будуть закладені з самого початку. <!-- TODO: refine your own vision --> Zemand Automation — це місце, де я збираю ці ідеї. <!-- TODO: mention plans to grow it into a company, if you want -->"
 
+  # TODO: demo stock photo
   image: "images/about/02.jpg"
 
 # about_video
 about_video:
   enable: true
-  subtitle: "A Short Video"
-  title: "You Take Care Of The Payments, We Take Care Of The Rest."
-  description: "Protect your design vision and leave nothing up to interpretation with interaction recipes. Quickly share and access all your team members interactions by using libraries, ensuring consistcy throughout the."
+  subtitle: "TODO"
+  title: "TODO: відео"
+  description: "TODO: додайте власне відео й опис або вимкніть цю секцію."
+  # TODO: demo video of the theme author
   video_url: "https://www.youtube.com/embed/dyZcRRWiuuw"
   video_thumbnail: "images/about/video-popup-2.jpg"
 
 # brands
 brands_carousel:
   enable: true
-  subtitle: "Our Clients"
-  title: "Trusted by Thousands Companies"
+  subtitle: "TODO"
+  title: "TODO: партнери або клієнти"
   section: "/" # brand images comming form _index.md
 
 # our team
 our_team:
   enable: true
-  subtitle: "Our members"
-  title: "The People Behind"
-  description: "We were freelance designers and developers, constantly finding <br> ourselves deep in vague feedback. This made every client and team"
+  subtitle: "TODO"
+  title: "TODO: команда"
+  description: "TODO: додайте учасників команди або вимкніть цю секцію."
   team:
-    - name: "Valentin Staykov"
+    - name: "TODO: ім’я"
       image: "images/about/team/01.jpg"
-      designation: "Operations"
-    - name: "Bukiakta Bansalo"
-      image: "images/about/team/02.jpg"
-      designation: "Product"
-    - name: "Ortrin Okaster"
-      image: "images/about/team/03.jpg"
-      designation: "Engineering"
+      designation: "TODO: роль"
 
 # our office
 our_office:
   enable: true
-  subtitle: "Our Offices"
-  title: "Made with Love Of around the world With Many Offices"
-  description: "We were freelance designers and developers, constantly finding <br> ourselves deep in vague feedback. This made every client and team"
+  subtitle: "TODO"
+  title: "TODO: локація"
+  description: "TODO: додайте адресу або вимкніть цю секцію."
   office_locations:
-    - city: "NewYork, USA"
+    - city: "TODO: місто"
       country_flag: "images/about/flags/us.png"
-      address_line_one: "219 Bald Hill Drive"
-      address_line_two: "Oakland Gardens, NY 11364"
-    - city: "Australia, Perth"
-      country_flag: "images/about/flags/au.png"
-      address_line_one: "Flat 23 80 Anthony Circlet"
-      address_line_two: "Port Guiseppe, TAS 2691"
-    - city: "Berlin, Germany"
-      country_flag: "images/about/flags/germany.png"
-      address_line_one: "Jl Raya Dewi Sartika Ged"
-      address_line_two: "Harapan Masa, Br Germeny"
-    - city: "China, Wohan"
-      country_flag: "images/about/flags/china.png"
-      address_line_one: "1hao Wen Ti Huo Dong"
-      address_line_two: "Zhong Xin 1ceng Jian Xing"
+      address_line_one: "TODO: адреса"
+      address_line_two: ""
 ---

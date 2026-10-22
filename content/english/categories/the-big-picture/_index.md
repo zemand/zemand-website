@@ -1,8 +1,5 @@
 ---
-title: "All about Blog"
-description: "Desc Blog..."
-image: "images/categories/microgrid-main.jpg"
+title: "The Big Picture"
+description: "TODO: not in the category list; decide whether to keep it."
 layout: "list"
 ---
-
-Тут ти можеш написати великий лонгрід про Microgrid. Hugo покаже цей текст, а нижче — всі статті, які ти помітив категорією "Microgrid".
