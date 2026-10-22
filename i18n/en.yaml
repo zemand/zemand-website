@@ -72,3 +72,6 @@
 
 - id: toggle_navigation
   translation: Toggle navigation
+
+- id: contacts
+  translation: Contacts

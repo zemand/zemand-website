@@ -28,7 +28,7 @@ brands_carousel:
 features:
   enable: true
   subtitle: "Topics"
-  title: "Welcome to Zemand Automation"
+  title: "Welcome to ZEMAND Automation"
   description: "A blog and knowledge platform about industrial automation, AI, Computer Vision and Robotics. Here I share what I learn along the way and try to explain it in plain language. Whether you are an engineer, a student or just curious, I hope you will find something useful."
   features_blocks:
     - icon: "las la-brain"

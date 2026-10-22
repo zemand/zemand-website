@@ -5,9 +5,9 @@
   label = "UA"
   contentDir = "content/ukrainian"
   weight = 1
-  title = "Zemand Automation"
+  title = "ZEMAND Automation"
   # {year} is replaced with the current year in the footer
-  copyright = "© {year} Zemand Automation"
+  copyright = "© {year} ZEMAND Automation"
 
   [uk.params]
     footer_info = "Будь-хто, хто перестає вчитися, старіє, неважливо, у 20 чи 80 років. Будь-хто, хто продовжує вчитися, залишається молодим. — Генрі Форд"
@@ -15,9 +15,6 @@
   [uk.params.metadata]
     description = "Блог і платформа знань про розумну промислову автоматизацію: штучний інтелект, комп’ютерний зір, робототехніка. Простою мовою."
     keywords = ["промислова автоматизація", "штучний інтелект", "комп’ютерний зір", "робототехніка", "енергоменеджмент", "кібербезпека", "ПЛК"]
-
-  [uk.params.contact_info]
-    address = "Ірпінь"
 
   [uk.params.cookies]
     content = "Цей сайт використовує файли cookie. Продовжуючи користуватися сайтом, ви погоджуєтеся з цим."
@@ -28,8 +25,8 @@
   label = "EN"
   contentDir = "content/english"
   weight = 2
-  title = "Zemand Automation"
-  copyright = "© {year} Zemand Automation"
+  title = "ZEMAND Automation"
+  copyright = "© {year} ZEMAND Automation"
 
   [en.params]
     footer_info = "“Anyone who stops learning is old, whether at twenty or eighty. Anyone who keeps learning stays young.” — Henry Ford"
@@ -37,9 +34,6 @@
   [en.params.metadata]
     description = "A blog and knowledge platform about smart industrial automation: AI, Computer Vision, Robotics. Explained in plain language."
     keywords = ["industrial automation", "artificial intelligence", "computer vision", "robotics", "energy management", "cybersecurity", "PLC"]
-
-  [en.params.contact_info]
-    address = "Irpin, Ukraine"
 
   [en.params.cookies]
     content = "This site uses cookies. By continuing to use this website, you agree to their use."

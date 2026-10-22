@@ -57,9 +57,10 @@
       <div class="col-lg-4 col-md-6 col-sm-6">
         <div class="pe-4">
           <a
-            class="navbar-brand d-inline-block mb-4"
+            class="navbar-brand footer-brand d-inline-flex align-items-center mb-4"
             href="{{ site.BaseURL | relLangURL }}">
             {{ partial "logo.html" }}
+            <span class="footer-brand-name ms-3">{{ site.Title }}</span>
           </a>
           <p class="mb-0">{{ site.Params.footer_info | markdownify }}</p>
         </div>
@@ -67,16 +68,6 @@
       <div class="col-lg-3 col-md-6 col-sm-6 mt-5 mt-sm-0">
         <div class="footer-widget">
           <h4 class="mb-4">{{ T `socials` }}</h4>
-
-          {{ with site.Params.contact_info.email }}
-            <ul class="footer-links list-unstyled mb-4">
-              {{ range first 1 . }}
-                {{ if . }}
-                  <li><a href="mailto:{{ . }}">{{ . }}</a></li>
-                {{ end }}
-              {{ end }}
-            </ul>
-          {{ end }}
 
           <ul class="social-links list-inline">
             {{ range hugo.Data.social.main }}
@@ -106,11 +97,15 @@
       </div>
       <div class="col-lg-3 col-md-6 col-sm-6 mt-5 mt-lg-0">
         <div class="footer-widget">
-          <h4 class="mb-4">{{ T `location_contact` }}</h4>
+          <h4 class="mb-4">{{ T `contacts` }}</h4>
 
           {{ with site.Params.contact_info }}
             <ul class="footer-links list-unstyled">
-              <li>{{ .address | markdownify }}</li>
+              {{ range first 1 .email }}
+                {{ if . }}
+                  <li><a href="mailto:{{ . }}">{{ . }}</a></li>
+                {{ end }}
+              {{ end }}
               {{ range first 1 .phone }}
                 {{ if . }}
                   <li><a href="tel:{{ . }}">{{ . }}</a></li>

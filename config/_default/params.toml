@@ -9,7 +9,7 @@ logo_width = "48px"
 # if logo_webp set false, it will not generate WEBP version of logo | default is true
 logo_webp = true
 # logo text will only show when logo is missing.
-logo_text = "Zemand Automation"
+logo_text = "ZEMAND Automation"
 
 # footer information: per language in languages.toml
 
@@ -30,9 +30,8 @@ mainSections= ["blog"]
 
 # contact information
 [contact_info]
-# address: per language in languages.toml
 phone = ["+380 63 461075"]
-email = ["info@zemandautomation.com", "zemlianyiandrii@gmail.com"]
+email = ["zemandautomation@gmail.com"]
 
 # Preloader 
 # module: https://github.com/gethugothemes/hugo-modules/tree/master/components/preloader

@@ -72,3 +72,6 @@
 
 - id: toggle_navigation
   translation: Відкрити меню
+
+- id: contacts
+  translation: Контакти

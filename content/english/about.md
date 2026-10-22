@@ -29,7 +29,7 @@ our_mission:
   enable: true
   subtitle: "Vision"
   title: "Automation that sees, adapts and learns"
-  description: "I believe the automation of the future will not just follow programs: it will see, adapt and learn. Classical control and AI will work together, and cybersecurity and energy efficiency will be built in from the start. <!-- TODO: refine your own vision --> Zemand Automation is the place where I collect these ideas. <!-- TODO: mention plans to grow it into a company, if you want -->"
+  description: "I believe the automation of the future will not just follow programs: it will see, adapt and learn. Classical control and AI will work together, and cybersecurity and energy efficiency will be built in from the start. <!-- TODO: refine your own vision --> ZEMAND Automation is the place where I collect these ideas. <!-- TODO: mention plans to grow it into a company, if you want -->"
 
   # TODO: demo stock photo
   image: "images/about/02.jpg"

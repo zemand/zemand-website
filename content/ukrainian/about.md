@@ -29,7 +29,7 @@ our_mission:
   enable: true
   subtitle: "Бачення"
   title: "Автоматизація, що бачить, адаптується і вчиться"
-  description: "Я вірю, що автоматизація майбутнього не просто виконуватиме програми: вона бачитиме, адаптуватиметься і вчитиметься. Класичне керування та ШІ працюватимуть разом, а кібербезпека й енергоефективність будуть закладені з самого початку. <!-- TODO: refine your own vision --> Zemand Automation — це місце, де я збираю ці ідеї. <!-- TODO: mention plans to grow it into a company, if you want -->"
+  description: "Я вірю, що автоматизація майбутнього не просто виконуватиме програми: вона бачитиме, адаптуватиметься і вчитиметься. Класичне керування та ШІ працюватимуть разом, а кібербезпека й енергоефективність будуть закладені з самого початку. <!-- TODO: refine your own vision --> ZEMAND Automation — це місце, де я збираю ці ідеї. <!-- TODO: mention plans to grow it into a company, if you want -->"
 
   # TODO: demo stock photo
   image: "images/about/02.jpg"

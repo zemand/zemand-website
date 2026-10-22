@@ -323,3 +323,15 @@ html[data-theme="dark"] .nav-theme-btn {
     display: inline-block;
   }
 }
+
+// Footer: site name next to the logo
+.footer-brand-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: $black;
+  white-space: nowrap;
+}
+
+html[data-theme="dark"] .footer-brand-name {
+  color: var(--dark-heading);
+}
