@@ -1,7 +1,6 @@
 ---
 # banner
 banner:
-  title: "Розумна автоматизація простими словами"
   button: "Читати блог"
   button_link: "blog/"
   show_logo: true
@@ -13,7 +12,6 @@ brands_carousel:
 # features
 features:
   enable: true
-  subtitle: "Теми"
   title: "Вітаю в ZEMAND Automation"
   description: "Блог і платформа знань про промислову автоматизацію, штучний інтелект, комп’ютерний зір і робототехніку. Тут я ділюся тим, що дізнаюся, і намагаюся пояснювати це зрозумілою мовою. Інженер ви, студент чи просто цікавитеся, сподіваюся, ви знайдете тут щось корисне."
   features_blocks:
@@ -38,7 +36,7 @@ features:
 
 # intro_video
 intro_video:
-  enable: true
+  enable: false # hidden for now
   subtitle: "TODO"
   title: "TODO: вступне відео"
   description: "TODO: додайте власне відео й опис або вимкніть цю секцію."

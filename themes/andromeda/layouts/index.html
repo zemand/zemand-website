@@ -59,20 +59,37 @@
 
 
   {{ with .Params.banner }}
-    <section class="banner{{ if .show_logo }} banner-with-logo{{ end }}">
+    {{ if .show_logo }}
+    {{/* hero: big site logo (light/dark) and one call-to-action button */}}
+    <section class="hero">
+      <div class="container">
+        <div class="hero-inner text-center" data-aos="fade-up">
+          {{ with .title }}
+            <h1 class="hero-title">{{ . | markdownify }}</h1>
+          {{ else }}
+            <h1 class="visually-hidden">{{ site.Title }}</h1>
+          {{ end }}
+          <div class="hero-logo">
+            {{ partial "logo.html" }}
+          </div>
+          {{ with .button }}
+            <a href="{{ $.Params.banner.button_link }}" class="btn-cta">
+              <span>{{ . }}</span>
+              <i class="las la-arrow-right" aria-hidden="true"></i>
+            </a>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+    {{ else }}
+    <section class="banner">
       <div class="container-xxl position-relative">
         <div class="row text-center">
           <div class="col-12">
             <div
               class="block row justify-content-center align-items-center no-gutters"
               data-aos="fade-up">
-              {{ if .show_logo }}
-                {{/* site logo (light/dark) next to the title */}}
-                <div class="col-lg-5 banner-logo mb-4 mb-lg-0" data-aos="fade-up">
-                  {{ partial "logo.html" }}
-                </div>
-              {{ end }}
-              <div class="{{ if .show_logo }}col-lg-6 text-lg-start ps-lg-5{{ else }}col-lg-10{{ end }} px-0 px-xl-4" data-rellax-speed="-3">
+              <div class="col-lg-10 px-0 px-xl-4" data-rellax-speed="-3">
                 <h1 class="mb-5" data-aos="fade-up">
                   {{ .title | markdownify }}
                 </h1>
@@ -146,6 +163,7 @@
         </div>
       </div>
     </section>
+    {{ end }}
   {{ end }}
 
   {{ with .Params.brands_carousel }}
@@ -185,7 +203,7 @@
           <div class="row">
             <div class="col-lg-12" data-aos="fade-up">
               <div class="section-title text-center">
-                <p class="text-uppercase">{{ .subtitle | markdownify }}</p>
+                {{ with .subtitle }}<p class="text-uppercase">{{ . | markdownify }}</p>{{ end }}
                 <h2 class="title">{{ .title | markdownify }}</h2>
                 <p>{{ .description | markdownify }}</p>
               </div>
@@ -301,8 +319,8 @@
               <div
                 class="{{ if $hasImage }}col-lg-5 {{ if (modBool $n 2) }}order-md-1{{ end }}{{ else }}col-lg-8 text-center{{ end }}"
                 data-aos="fade-up">
-                <div class="section-title mb-0">
-                  <p class="text-uppercase">{{ .subtitle | markdownify }}</p>
+                <div class="section-title mb-0{{ if not $hasImage }} text-center{{ end }}">
+                  {{ with .subtitle }}<p class="text-uppercase">{{ . | markdownify }}</p>{{ end }}
                   <h2 class="title text-break">{{ .title | markdownify }}</h2>
                   <p>{{ .description | markdownify }}</p>
                 </div>

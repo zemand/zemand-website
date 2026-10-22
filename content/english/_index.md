@@ -1,7 +1,6 @@
 ---
 # banner
 banner:
-  title: "Smart automation, explained simply"
   button: "Read the blog"
   button_link: "blog/"
   show_logo: true
@@ -13,7 +12,6 @@ brands_carousel:
 # features
 features:
   enable: true
-  subtitle: "Topics"
   title: "Welcome to ZEMAND Automation"
   description: "A blog and knowledge platform about industrial automation, AI, Computer Vision and Robotics. Here I share what I learn along the way and try to explain it in plain language. Whether you are an engineer, a student or just curious, I hope you will find something useful."
   features_blocks:
@@ -38,7 +36,7 @@ features:
 
 # intro_video
 intro_video:
-  enable: true
+  enable: false # hidden for now
   subtitle: "TODO"
   title: "TODO: intro video"
   description: "TODO: add your own video and description, or disable this section."
