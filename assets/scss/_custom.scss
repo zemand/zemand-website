@@ -335,3 +335,61 @@ html[data-theme="dark"] .nav-theme-btn {
 html[data-theme="dark"] .footer-brand-name {
   color: var(--dark-heading);
 }
+
+// Home: technologies row (replaces the demo brand carousel)
+.tech-strip {
+  margin-top: 3.125rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+  text-align: center;
+}
+
+.tech-strip-title {
+  margin-bottom: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 2.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-weight: 600;
+  color: #666666;
+  transition: color 0.3s ease;
+
+  svg {
+    width: 2rem;
+    height: 2rem;
+    fill: currentColor;
+  }
+
+  &:hover {
+    color: var(--tech-color);
+  }
+}
+
+html[data-theme="dark"] {
+  .tech-strip {
+    border-color: var(--dark-border);
+  }
+
+  .tech-item {
+    color: var(--dark-text-soft);
+
+    &:hover {
+      color: var(--tech-color);
+    }
+  }
+}

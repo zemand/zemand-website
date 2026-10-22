@@ -7,22 +7,26 @@ banner:
   # TODO: replace the demo illustration with your own image
   image: "images/banner-app.png"
 
-# brands
-# TODO: demo logos of other companies; replace with real partners or disable the section
+# brands: technologies I work with (static row; brand_images would show the old carousel)
 brands_carousel:
   enable: true
-  brand_images:
-    - "images/brands/01-colored.png"
-    - "images/brands/02-colored.png"
-    - "images/brands/04-colored.png"
-    - "images/brands/03-colored.png"
-    - "images/brands/05-colored.png"
-    - "images/brands/06-colored.png"
-    - "images/brands/04-colored.png"
-    - "images/brands/02-colored.png"
-    - "images/brands/01-colored.png"
-    - "images/brands/06-colored.png"
-    - "images/brands/05-colored.png"
+  title: "Технології, з якими я працюю"
+  technologies:
+    - name: "Python"
+      icon: "images/tech/python.svg"
+      color: "3776AB"
+    - name: "OpenCV"
+      icon: "images/tech/opencv.svg"
+      color: "5C3EE8"
+    - name: "PyTorch"
+      icon: "images/tech/pytorch.svg"
+      color: "EE4C2C"
+    - name: "Schneider Electric"
+      icon: "images/tech/schneiderelectric.svg"
+      color: "3DCD58"
+    - name: "Rockwell Automation"
+      icon: "images/tech/rockwellautomation.svg"
+      color: "CD163F"
 
 # features
 features:

@@ -143,7 +143,26 @@
   {{ end }}
 
   {{ with .Params.brands_carousel }}
-    {{ if .enable }}
+    {{ if and .enable .technologies }}
+      {{/* static row of technologies: icon + name, colored on hover */}}
+      <section class="overflow-hidden">
+        <div class="container">
+          <div class="tech-strip" data-aos="fade-up">
+            {{ with .title }}
+              <p class="tech-strip-title text-uppercase">{{ . | markdownify }}</p>
+            {{ end }}
+            <ul class="tech-list">
+              {{ range .technologies }}
+                <li class="tech-item" style="--tech-color: #{{ .color }}">
+                  {{ with resources.Get .icon }}{{ .Content | safeHTML }}{{ end }}
+                  <span>{{ .name }}</span>
+                </li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+      </section>
+    {{ else if .enable }}
       <section class="overflow-hidden">
         <div class="container">
           <div class="row">
