@@ -33,7 +33,5 @@ cybersecurity:
     - { name: "IEC 62443", la: "las la-user-shield" }
 
 energy-management:
-  kind: mixed
   items:
-    - { name: "Schneider Electric", icon: "images/tech/schneiderelectric.svg", color: "3DCD58" }
     - { name: "IEC 61850", la: "las la-bolt" }
