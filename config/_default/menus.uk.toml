@@ -57,6 +57,12 @@ weight = 4
   url = "/categories/cybersecurity/"
   weight = 6
 
+  [[main]]
+  parent = "categories"
+  name = "Широкий кут"
+  url = "/categories/the-big-picture/"
+  weight = 7
+
 [[main]]
 name = "Контакти"
 url = "/contact/"

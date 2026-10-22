@@ -1,5 +1,5 @@
 ---
 title: "The Big Picture"
-description: "TODO: not in the category list; decide whether to keep it."
+description: "Thoughts that don't fit into a single category."
 layout: "list"
 ---
