@@ -9,10 +9,9 @@ logo_width = "48px"
 # if logo_webp set false, it will not generate WEBP version of logo | default is true
 logo_webp = true
 # logo text will only show when logo is missing.
-logo_text = "Andromeda"
+logo_text = "Zemand Automation"
 
-# footer information
-footer_info = "Будь-хто, хто перестає вчитися, старіє, неважливо, у 20 чи 80 років. Будь-хто, хто продовжує вчитися, залишається молодим. — Генрі Форд"
+# footer information: per language in languages.toml
 
 # contact form action
 contact_form_action = "https://formspree.io/f/xgernlzd" # contact form works with https://formspree.io
@@ -31,7 +30,7 @@ mainSections= ["blog"]
 
 # contact information
 [contact_info]
-address = "Irpin"
+# address: per language in languages.toml
 phone = ["+380 63 461075"]
 email = ["info@zemandautomation.com", "zemlianyiandrii@gmail.com"]
 
@@ -51,10 +50,11 @@ link = "https://gethugothemes.com/products/andromeda/"
 # seo meta data for OpenGraph / Twitter Card
 # seo module: https://github.com/gethugothemes/hugo-modules/tree/master/seo-tools/basic-seo
 [metadata]
-keywords = ["Hugo", "GetHugoThemes", "Themefisher"]
-description = "Software and SAAS Landing Hugo Theme"
-author = "Gethugothemes"
-image = "images/og-image.jpg" # this image will be used as fallback if a page has no image of its own
+# keywords and description: per language in languages.toml
+# author is also printed as the twitter:creator handle, so it is left unset
+# TODO: twitter/X handle, if any
+# TODO: a proper 1200x630 social image; og-image.png is a screenshot of the theme demo
+image = "images/favicon.png" # this image will be used as fallback if a page has no image of its own
 
 # matomo tracking: see https://matomo.org/
 # matomo module: https://github.com/gethugothemes/hugo-modules/tree/master/seo-tools/matomo-analytics
@@ -100,8 +100,7 @@ crisp_website_id = "4f006daa-9b05-461f-a6c4-e09811f312f6" # replace this code wi
 [cookies]
 enable = true
 expire_days = 2
-content = "This site uses cookies. By continuing to use this website, you agree to their use."
-button = "I Accept"
+# content and button: per language in languages.toml
 
 # call-to-action
 [cta]
