@@ -7,7 +7,7 @@
   weight = 1
   title = "ZEMAND Automation"
   # {year} is replaced with the current year in the footer
-  copyright = "© {year} ZEMAND Automation"
+  copyright = "© {year} ZEMAND Automation. Усі права захищено."
 
 
   [uk.params.metadata]
@@ -24,7 +24,7 @@
   contentDir = "content/english"
   weight = 2
   title = "ZEMAND Automation"
-  copyright = "© {year} ZEMAND Automation"
+  copyright = "© {year} ZEMAND Automation. All rights reserved."
 
 
   [en.params.metadata]

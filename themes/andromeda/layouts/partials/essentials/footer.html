@@ -91,7 +91,7 @@
           <h4 class="mb-4">{{ T `contacts` }}</h4>
 
           {{/* contact icons: email from params, messengers from data/social.json */}}
-          <ul class="social-links list-inline mb-4">
+          <ul class="social-links list-inline">
             {{ range first 1 site.Params.contact_info.email }}
               <li class="list-inline-item">
                 <a aria-label="email" href="mailto:{{ . }}">
@@ -111,21 +111,6 @@
               </li>
             {{ end }}
           </ul>
-
-          {{ with site.Params.contact_info }}
-            <ul class="footer-links list-unstyled">
-              {{ range first 1 .email }}
-                {{ if . }}
-                  <li><a href="mailto:{{ . }}">{{ . }}</a></li>
-                {{ end }}
-              {{ end }}
-              {{ range first 1 .phone }}
-                {{ if . }}
-                  <li><a href="tel:{{ . }}">{{ . }}</a></li>
-                {{ end }}
-              {{ end }}
-            </ul>
-          {{ end }}
         </div>
       </div>
     </div>
