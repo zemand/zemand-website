@@ -51,11 +51,11 @@ how_it_works:
   block:
   - subtitle: "Why this blog"
     title: "Learning by explaining"
-    description: "I started this blog because I love finding things out and explaining them to others. Writing makes me understand a topic properly, and if it helps someone else, even better. Here I share what I discover, in plain language."
+    description: "I love learning new things, but I was not born a genius: many topics are hard for me. So I check myself with a simple test: if I can explain the material so that anyone understands it, I have really understood it. If I can't, there is a gap somewhere, and I go back to the topic. This approach is known as the Feynman method, and this blog became its continuation. [Read the full story →](blog/blog/)"
 
   - subtitle: "Why these topics"
-    title: "Where classical control meets AI"
-    description: "The automation of the future will not just follow programs: it will see, adapt and learn. That is why PLCs sit next to artificial intelligence here, computer vision next to robotics, and cybersecurity and energy efficiency are built in from the start, not added later."
+    title: "Where industrial automation meets AI"
+    description: "The industrial automation of the future will not just follow programs: it will see, adapt and learn. PLCs and control systems will work together with artificial intelligence, computer vision and robotics will become part of production, and cybersecurity and energy efficiency will be built in from the start, not added later."
 
 
 # testimonials

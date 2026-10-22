@@ -892,3 +892,21 @@ html[data-theme="dark"] .feynman-steps li {
   border-color: var(--dark-border-strong);
   color: var(--dark-heading);
 }
+
+// Links inside section descriptions (e.g. "Read the full story" on Home)
+.section-title p a {
+  font-weight: 600;
+  white-space: nowrap;
+  text-decoration: underline;
+  text-decoration-color: $color-primary;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.3em;
+}
+
+html:not([data-theme="dark"]) .section-title p a {
+  color: $brand-navy;
+}
+
+html[data-theme="dark"] .section-title p a {
+  color: $color-primary !important;
+}
