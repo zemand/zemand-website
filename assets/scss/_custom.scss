@@ -6,6 +6,7 @@
 $brand-navy: #0f2a47;
 $brand-light-bg: #eef2f7;
 $text-color: #5b6b7f; // 4.9:1 on #EEF2F7, 5.5:1 on white
+$border-light: #c9d3df; // borders in the light theme, visible on #EEF2F7 and white
 
 body,
 a,
@@ -222,9 +223,9 @@ html[data-theme="dark"] {
   --dark-muted: #a7b4c4;
   --dark-footer-text: #8fa0b4;
   --dark-placeholder: #7d8da1;
-  --dark-border: #1e3a5c;
-  --dark-border-strong: #26476b;
-  --dark-border-footer: #16304d;
+  --dark-border: #2b4a6f;
+  --dark-border-strong: #36597f;
+  --dark-border-footer: #24405f;
   --dark-accent: #{$color-primary};
 }
 
@@ -671,4 +672,63 @@ html[data-theme="dark"] .preloader {
 html[data-theme="dark"] .post-byline,
 html[data-theme="dark"] .post-byline a {
   color: var(--dark-muted) !important;
+}
+
+// Borders with a bit more contrast (cards, icon boxes, lines, round icons)
+html:not([data-theme="dark"]) {
+  .features-card,
+  .blog-card,
+  .card {
+    border: 1px solid $border-light !important;
+    box-shadow: 0 0.5rem 1.5rem rgba($brand-navy, 0.06) !important;
+  }
+
+  .features-card .icon,
+  .social-links a,
+  .tech-strip,
+  .border-top,
+  footer,
+  .footer-bottom .border-top,
+  hr {
+    border-color: $border-light !important;
+  }
+}
+
+.features-card:hover {
+  border-color: $color-primary !important;
+}
+
+html[data-theme="dark"] {
+  .features-card,
+  .blog-card,
+  .card {
+    border: 1px solid var(--dark-border) !important;
+  }
+
+  .features-card {
+    background-color: var(--dark-bg-elevated);
+  }
+
+  .features-card .icon,
+  .border-top,
+  hr {
+    border-color: var(--dark-border-strong) !important;
+  }
+}
+
+// Dark theme: the desktop dropdown is drawn by .dropdown-menu::after (white in the theme)
+html[data-theme="dark"] .dropdown-menu::after {
+  background-color: var(--dark-bg-elevated) !important;
+  border-color: var(--dark-border-strong) !important;
+}
+
+html[data-theme="dark"] .navigation .dropdown-menu,
+html[data-theme="dark"] .header-nav .dropdown-menu {
+  background-color: transparent !important;
+}
+
+@media (max-width: 990px) {
+  html[data-theme="dark"] .header-nav .dropdown-menu {
+    background-color: var(--dark-bg-elevated) !important;
+  }
 }
