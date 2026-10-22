@@ -9,7 +9,9 @@
       "title": "github",
       "icon": "lab la-github",
       "link": "https://github.com/zemand"
-    },
+    }
+  ],
+  "contacts": [
     {
       "title": "whatsapp",
       "icon": "lab la-whatsapp",

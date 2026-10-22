@@ -90,6 +90,28 @@
         <div class="footer-widget">
           <h4 class="mb-4">{{ T `contacts` }}</h4>
 
+          {{/* contact icons: email from params, messengers from data/social.json */}}
+          <ul class="social-links list-inline mb-4">
+            {{ range first 1 site.Params.contact_info.email }}
+              <li class="list-inline-item">
+                <a aria-label="email" href="mailto:{{ . }}">
+                  <i class="las la-envelope"></i>
+                </a>
+              </li>
+            {{ end }}
+            {{ range hugo.Data.social.contacts }}
+              <li class="list-inline-item">
+                <a
+                  target="_blank"
+                  aria-label="{{ .title }}"
+                  rel="nofollow noopener"
+                  href="{{ .link | safeURL }}">
+                  <i class="{{ .icon }}"></i>
+                </a>
+              </li>
+            {{ end }}
+          </ul>
+
           {{ with site.Params.contact_info }}
             <ul class="footer-links list-unstyled">
               {{ range first 1 .email }}
