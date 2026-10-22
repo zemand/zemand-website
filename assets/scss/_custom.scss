@@ -910,3 +910,9 @@ html:not([data-theme="dark"]) .section-title p a {
 html[data-theme="dark"] .section-title p a {
   color: $color-primary !important;
 }
+
+// Headings as written (the theme capitalized every word: "Де Промислова Автоматизація")
+.section-title .title,
+.text-capitalize {
+  text-transform: none !important;
+}

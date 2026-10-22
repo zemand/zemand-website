@@ -54,7 +54,7 @@ how_it_works:
     description: "I love learning new things, but I was not born a genius: many topics are hard for me. So I check myself with a simple test: if I can explain the material so that anyone understands it, I have really understood it. If I can't, there is a gap somewhere, and I go back to the topic. This approach is known as the Feynman method, and this blog became its continuation. [Read the full story →](blog/blog/)"
 
   - subtitle: "Why these topics"
-    title: "Where industrial automation meets AI"
+    title: "Where industrial automation meets AI"
     description: "The industrial automation of the future will not just follow programs: it will see, adapt and learn. PLCs and control systems will work together with artificial intelligence, computer vision and robotics will become part of production, and cybersecurity and energy efficiency will be built in from the start, not added later."
 
 
