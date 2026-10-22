@@ -9,6 +9,16 @@
       "title": "github",
       "icon": "lab la-github",
       "link": "https://github.com/zemand"
+    },
+    {
+      "title": "whatsapp",
+      "icon": "lab la-whatsapp",
+      "link": "https://wa.me/380634616075"
+    },
+    {
+      "title": "telegram",
+      "icon": "lab la-telegram",
+      "link": "https://t.me/+380634616075"
     }
   ]
 }

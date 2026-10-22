@@ -62,7 +62,9 @@
             {{ partial "logo.html" }}
             <span class="footer-brand-name ms-3">{{ site.Title }}</span>
           </a>
-          <p class="mb-0">{{ site.Params.footer_info | markdownify }}</p>
+          {{ with site.Params.footer_info }}
+            <p class="mb-0">{{ . | markdownify }}</p>
+          {{ end }}
         </div>
       </div>
       <div class="col-lg-3 col-md-6 col-sm-6 mt-5 mt-sm-0">
