@@ -193,9 +193,8 @@ window.onload = () => {
   
       // Click overlay to close popup
       overlay.addEventListener('click', hidePopup);
-  } else {
-      console.error('Required elements not found.');
   }
+  // no popup on the page when params.buy_premium_popup is false
   
   
   
