@@ -1,6 +1,7 @@
 #################### default parameters ################################
 # favicon module: https://github.com/gethugothemes/hugo-modules/tree/master/images#favicon-implementation
-favicon = "images/favicon.png"
+favicon = "images/favicon.png" # square ZA logo (dark), rendered from static/images/zemand_za_square_dark.svg
+favicon_svg = "images/zemand_za_square_dark.svg"
 # logo module: https://github.com/gethugothemes/hugo-modules/tree/master/images#logo-implementation
 logo = "images/logo/zemand-logo-light.svg"
 # shown instead of logo in the dark theme
@@ -39,7 +40,7 @@ email = ["zemandautomation@gmail.com"]
 # module: https://github.com/gethugothemes/hugo-modules/tree/master/components/preloader
 [preloader]
 enable = true
-preloader = "images/favicon.png" # use jpg, png, svg or gif format.
+preloader = "images/preloader.png" # round ZA logo (light), rendered from static/images/zemand_za_round_light.svg
 
 # Navigation button
 [navigation_button]
@@ -54,8 +55,7 @@ link = "https://gethugothemes.com/products/andromeda/"
 # keywords and description: per language in languages.toml
 # author is also printed as the twitter:creator handle, so it is left unset
 # TODO: twitter/X handle, if any
-# TODO: a proper 1200x630 social image; og-image.png is a screenshot of the theme demo
-image = "images/favicon.png" # this image will be used as fallback if a page has no image of its own
+image = "images/og-image.png" # 1200x630, dark wide logo on navy; fallback if a page has no image of its own
 
 # matomo tracking: see https://matomo.org/
 # matomo module: https://github.com/gethugothemes/hugo-modules/tree/master/seo-tools/matomo-analytics

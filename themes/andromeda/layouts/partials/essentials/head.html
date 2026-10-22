@@ -22,8 +22,14 @@
 
 <meta name="theme-name" content="andromeda-light-hugo" />
 
-<link rel="shortcut icon" href="{{ site.Params.favicon | relURL }}?v=2" type="image/x-icon">
-<link rel="icon" href="{{ site.Params.favicon | relURL }}?v=2" type="image/x-icon">
+<!-- favicon: square ZA logo; PNG for every browser, SVG where supported -->
+<link rel="icon" href="{{ site.Params.favicon | relURL }}?v=3" type="image/png" sizes="512x512">
+{{ with site.Params.favicon_svg }}
+  <link rel="icon" href="{{ . | relURL }}" type="image/svg+xml" sizes="any">
+{{ end }}
+{{ with resources.Get site.Params.favicon }}
+  <link rel="apple-touch-icon" href="{{ (.Resize "180x180 png").RelPermalink }}">
+{{ end }}
 
 
 <!-- manifest -->
