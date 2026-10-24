@@ -2,7 +2,7 @@
 date: "2026-05-01"
 title: "Why this blog?"
 categories: ["The Big Picture"]
-image: "images/blog/01.jpg"
+image: "images/blog/why-this-blog-cover.svg"
 author: "andrii-zemlianyi"
 draft: false
 ---
